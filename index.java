@@ -1,10 +1,10 @@
   
-    Scroll progress bar + navbar
-    const bar = document.getElementById('spbar'), nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      bar.style.width = (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + '%';
-      nav.classList.toggle('sc', window.scrollY > 60);
-    });
+    // Scroll progress bar + navbar
+    // const bar = document.getElementById('spbar'), nav = document.getElementById('navbar');
+    // window.addEventListener('scroll', () => {
+    //   bar.style.width = (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + '%';
+    //   nav.classList.toggle('sc', window.scrollY > 60);
+    // });
 
     // Countdown
     function tick() {
