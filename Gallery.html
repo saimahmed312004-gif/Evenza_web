@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – Evenza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+  <div id="spbar"></div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <button id="lb-close" onclick="closeLB()">✕</button>
+    <img id="lb-img" src="" alt="" />
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-box">✦</div>
+      Evenza<span class="logo-dot">.</span>
+    </a>
+    <ul class="nav-ul">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li class="dropdown">
+        <a href="#" class="active">Pages ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="Gallery.html" style="color:#a855f7">Gallery</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="index.html#pr" class="nav-btn">Join The Conference</a>
+    <button class="hmb" id="hambBtn" onclick="toggleNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="closeNav()">Home</a>
+    <a href="about.html" onclick="closeNav()">About Us</a>
+    <a href="schedule.html" onclick="closeNav()">Schedule</a>
+    <a href="blog.html" onclick="closeNav()">Blog</a>
+    <div class="mob-sep"></div>
+    <a href="services.html" onclick="closeNav()">Services</a>
+    <a href="speakers.html" onclick="closeNav()">Speakers</a>
+    <a href="Gallery.html" onclick="closeNav()">Gallery</a>
+    <a href="faq.html" onclick="closeNav()">FAQ</a>
+    <a href="pricing.html" onclick="closeNav()">Pricing</a>
+    <div class="mob-sep"></div>
+    <a href="contact.html" onclick="closeNav()">Contact Us</a>
+    <div class="mob-sep"></div>
+    <a href="index.html#pr" class="mob-btn" onclick="closeNav()">Join The Conference</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="pg-hero">
+    <div class="pg-hero-bg"></div>
+    <div class="pg-hero-ov"></div>
+    <div class="pg-hero-grid"></div>
+    <div class="pg-hero-wrap">
+      <div class="breadcrumb fade-in"><a href="index.html">Home</a><span>›</span><span
+          style="color:rgba(255,255,255,.6)">Gallery</span></div>
+      <div class="pg-lbl fade-in">Our Portfolio</div>
+      <h1 class="pg-title fade-in-2">Events That Left<br /><em>The World</em> Speechless</h1>
+      <p class="pg-sub fade-in-3">2,400+ events. Every one a masterpiece. Browse highlights from our most unforgettable
+        productions around the globe.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <div class="gal-wrap">
+    <div class="gal-filter rv">
+      <button class="g-btn on" onclick="filterGal(this,'all')">All Events</button>
+      <button class="g-btn" onclick="filterGal(this,'conference')">Conferences</button>
+      <button class="g-btn" onclick="filterGal(this,'gala')">Galas</button>
+      <button class="g-btn" onclick="filterGal(this,'launch')">Product Launches</button>
+      <button class="g-btn" onclick="filterGal(this,'hybrid')">Hybrid</button>
+      <button class="g-btn" onclick="filterGal(this,'corporate')">Corporate</button>
+    </div>
+
+    <div class="gal-grid rv">
+      <div class="gal-item" data-cat="conference" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&fit=crop"
+          alt="Global Future Leaders Summit" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Conference</div>
+          <div class="gal-caption">Global Future Leaders Summit — London 2024</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="gala" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80&fit=crop"
+          alt="Excellence Awards Gala" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Gala</div>
+          <div class="gal-caption">Annual Excellence Awards Gala — Dubai 2024</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="launch" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80&fit=crop"
+          alt="TechCorp Product Launch" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Launch</div>
+          <div class="gal-caption">TechCorp X1 Global Product Launch — Singapore 2024</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="hybrid" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80&fit=crop"
+          alt="World Innovation Forum" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Hybrid</div>
+          <div class="gal-caption">World Innovation Forum — Hybrid Edition 2023</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="conference" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80&fit=crop"
+          alt="MENA Tech Summit" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Conference</div>
+          <div class="gal-caption">MENA Tech Summit — Abu Dhabi 2023</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="corporate" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=800&q=80&fit=crop"
+          alt="Fortune 500 Leadership Retreat" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Corporate</div>
+          <div class="gal-caption">Fortune 500 Leadership Retreat — Swiss Alps 2023</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="gala" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&fit=crop"
+          alt="Sustainability Awards" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Gala</div>
+          <div class="gal-caption">Sustainability Awards Ceremony — New York 2023</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="launch" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80&fit=crop"
+          alt="Apex Auto EV Launch" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Launch</div>
+          <div class="gal-caption">Apex Auto — Global EV Launch Event 2022</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="conference" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80&fit=crop"
+          alt="Asia Investment Summit" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Conference</div>
+          <div class="gal-caption">Asia Investment Summit — Tokyo 2022</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="hybrid" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80&fit=crop"
+          alt="Digital Transformation Forum" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Hybrid</div>
+          <div class="gal-caption">Digital Transformation Forum — Global 2022</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="corporate" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80&fit=crop"
+          alt="Global CEO Roundtable" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Corporate</div>
+          <div class="gal-caption">Global CEO Roundtable — Davos 2022</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+      <div class="gal-item" data-cat="gala" onclick="openLB(this)">
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&fit=crop"
+          alt="Evenza 10th Anniversary Gala" loading="lazy" />
+        <div class="gal-ov">
+          <div class="gal-tag">Gala</div>
+          <div class="gal-caption">Evenza 10th Anniversary Gala — Dubai 2022</div>
+        </div>
+        <div class="gal-zoom">⛶</div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="gal-stats rv">
+      <div class="gs">
+        <div class="gs-n"><span>2,400+</span></div>
+        <div class="gs-l">Events Delivered</div>
+      </div>
+      <div class="gs">
+        <div class="gs-n"><span>40+</span></div>
+        <div class="gs-l">Countries</div>
+      </div>
+      <div class="gs">
+        <div class="gs-n"><span>15K</span></div>
+        <div class="gs-l">Max Attendees Per Event</div>
+      </div>
+      <div class="gs">
+        <div class="gs-n"><span>98%</span></div>
+        <div class="gs-l">Client Return Rate</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-outer">
+    <div class="cta-box rv">
+      <h2>Want Your Event in <em>This Gallery?</em></h2>
+      <p>Let's create something extraordinary together. Reach out to our team today.</p>
+      <div class="cta-btns">
+        <a href="index.html#ct" class="btn-p">Start a Project</a>
+        <a href="services.html" class="btn-g">Our Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="ft">
+      <div class="fb">
+        <a href="index.html" class="logo">
+          <div class="logo-box">✦</div>Evenza<span class="logo-dot">.</span>
+        </a>
+        <p>We transform your event vision into extraordinary, memorable experiences that inspire and connect people
+          worldwide.</p>
+        <div class="ft-soc"><a href="#" class="fts">in</a><a href="#" class="fts">𝕏</a><a href="#" class="fts">f</a><a
+            href="#" class="fts">▶</a></div>
+      </div>
+      <div class="fc">
+        <h4>Quick Links</h4>
+        <ul class="fl">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="index.html#pr">Tickets</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Services</h4>
+        <ul class="fl">
+          <li><a href="services.html">Event Planning</a></li>
+          <li><a href="services.html">Corporate Events</a></li>
+          <li><a href="services.html">Conferences</a></li>
+          <li><a href="services.html">Hybrid Events</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <ul class="fl">
+          <li><a href="#">hello@evenza.com</a></li>
+          <li><a href="#">+971 4 123 4567</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2025 Evenza. All rights reserved.</span>
+      <span>Crafted with ✦ for extraordinary events</span>
+    </div>
+  </footer>
+
+<script src="gallery.java"></script>
+</body>
+
+</html>

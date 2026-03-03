@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog – Evenza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="blog.css">
+
+</head>
+
+<body>
+  <div id="spbar"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-box">✦</div>
+      Evenza<span class="logo-dot">.</span>
+    </a>
+    <ul class="nav-ul">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li class="dropdown">
+        <a href="#">Pages ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="index.html#pr" class="nav-btn">Join The Conference</a>
+    <button class="hmb" id="hambBtn" onclick="toggleNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="closeNav()">Home</a>
+    <a href="about.html" onclick="closeNav()">About Us</a>
+    <a href="schedule.html" onclick="closeNav()">Schedule</a>
+    <a href="blog.html" onclick="closeNav()">Blog</a>
+    <div class="mob-sep"></div>
+    <a href="services.html" onclick="closeNav()">Services</a>
+    <a href="speakers.html" onclick="closeNav()">Speakers</a>
+    <a href="Gallery.html" onclick="closeNav()">Gallery</a>
+    <a href="faq.html" onclick="closeNav()">FAQ</a>
+    <a href="pricing.html" onclick="closeNav()">Pricing</a>
+    <div class="mob-sep"></div>
+    <a href="contact.html" onclick="closeNav()">Contact Us</a>
+    <div class="mob-sep"></div>
+    <a href="index.html#pr" class="mob-btn" onclick="closeNav()">Join The Conference</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="pg-hero">
+    <div class="pg-hero-bg"></div>
+    <div class="pg-hero-ov"></div>
+    <div class="pg-hero-grid"></div>
+    <div class="pg-hero-wrap">
+      <div class="breadcrumb fade-in">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span style="color:rgba(255,255,255,.6)">Blog</span>
+      </div>
+      <div class="pg-lbl fade-in">Insights & Ideas</div>
+      <h1 class="pg-title fade-in-2">Stories That <em>Inspire</em><br />Event Excellence</h1>
+      <p class="pg-sub fade-in-3">Expert insights, industry trends, and behind-the-scenes stories from the world of
+        extraordinary events.</p>
+    </div>
+  </section>
+
+  <!-- BLOG MAIN -->
+  <div class="blog-wrap">
+
+    <!-- Toolbar -->
+    <div class="blog-toolbar rv">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="Search articles..." id="searchInput" />
+      </div>
+      <div class="cat-filters">
+        <button class="cat-btn on" onclick="filterPosts(this,'all')">All</button>
+        <button class="cat-btn" onclick="filterPosts(this,'events')">Events</button>
+        <button class="cat-btn" onclick="filterPosts(this,'insights')">Insights</button>
+        <button class="cat-btn" onclick="filterPosts(this,'tips')">Tips & Tricks</button>
+        <button class="cat-btn" onclick="filterPosts(this,'tech')">Technology</button>
+        <button class="cat-btn" onclick="filterPosts(this,'trends')">Trends</button>
+      </div>
+    </div>
+
+    <!-- Featured Post -->
+    <div class="featured-post rv" data-cat="insights">
+      <div class="fp-img">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80&fit=crop" alt="Featured" />
+        <div class="fp-img-ov"></div>
+        <div class="fp-badge">⭐ Featured</div>
+      </div>
+      <div class="fp-content">
+        <div class="fp-cat">Insights</div>
+        <div class="fp-title">The Future of Events: How AI and Hybrid Formats Are Redefining the Industry in 2025</div>
+        <div class="fp-excerpt">From AI-powered attendee matching to immersive hybrid experiences, the events landscape
+          is transforming faster than ever. We explore what the next five years will look like for event professionals
+          worldwide.</div>
+        <div class="fp-meta">
+          <div class="fp-av">AR</div>
+          <div>
+            <div class="fp-author">Alexandra Reed</div>
+            <div class="fp-date">March 12, 2025 · 8 min read</div>
+          </div>
+        </div>
+        <div class="fp-tags">
+          <span class="tag">AI</span>
+          <span class="tag">Hybrid Events</span>
+          <span class="tag">Future of Events</span>
+        </div>
+        <a href="#" class="read-more">Read Full Article →</a>
+      </div>
+    </div>
+
+    <!-- Blog Layout: Posts + Sidebar -->
+    <div class="blog-layout">
+      <div>
+        <div class="posts-grid" id="posts-grid">
+
+          <div class="post-c rv" data-cat="tips">
+            <div class="post-img"><img
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80&fit=crop" alt="Post" />
+              <div class="post-cat tips">Tips & Tricks</div>
+            </div>
+            <div class="post-body">
+              <div class="post-title">10 Proven Strategies to Maximize Attendee Engagement at Any Conference</div>
+              <div class="post-excerpt">Keeping 2,000 attendees engaged across three days is no small feat. Here are the
+                tactics we swear by after delivering 2,400+ events worldwide.</div>
+              <div class="post-footer">
+                <div class="post-av-row">
+                  <div class="post-av">JM</div>
+                  <div class="post-author">James Morales</div>
+                </div>
+                <div class="post-info"><span class="post-date">Feb 28, 2025</span><span class="post-read">6 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-c rv" data-cat="tech">
+            <div class="post-img"><img
+                src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=600&q=80&fit=crop" alt="Post" />
+              <div class="post-cat tech">Technology</div>
+            </div>
+            <div class="post-body">
+              <div class="post-title">How We Used AR & Live-Streaming to Reach 2.3 Million Viewers at GFS 2024</div>
+              <div class="post-excerpt">Inside the tech stack that powered our most ambitious hybrid event yet — and
+                what we'd do differently next time.</div>
+              <div class="post-footer">
+                <div class="post-av-row">
+                  <div class="post-av">JP</div>
+                  <div class="post-author">James Park</div>
+                </div>
+                <div class="post-info"><span class="post-date">Feb 14, 2025</span><span class="post-read">9 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-c rv" data-cat="trends">
+            <div class="post-img"><img
+                src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&q=80&fit=crop" alt="Post" />
+              <div class="post-cat trends">Trends</div>
+            </div>
+            <div class="post-body">
+              <div class="post-title">The Rise of Micro-Events: Why Smaller, Focused Gatherings Are Winning in 2025
+              </div>
+              <div class="post-excerpt">Intimate, curated events are outperforming mega-conferences on nearly every
+                engagement metric. Here's what the data says.</div>
+              <div class="post-footer">
+                <div class="post-av-row">
+                  <div class="post-av">SN</div>
+                  <div class="post-author">Sophia Nguyen</div>
+                </div>
+                <div class="post-info"><span class="post-date">Jan 30, 2025</span><span class="post-read">5 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-c rv" data-cat="events">
+            <div class="post-img"><img
+                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80&fit=crop" alt="Post" />
+              <div class="post-cat events">Events</div>
+            </div>
+            <div class="post-body">
+              <div class="post-title">Behind the Scenes: Planning the Global Innovation Summit 2025</div>
+              <div class="post-excerpt">12 months. 48 speakers. 2,500 attendees. Here's an exclusive look at how we're
+                building the year's most anticipated conference from the ground up.</div>
+              <div class="post-footer">
+                <div class="post-av-row">
+                  <div class="post-av">SR</div>
+                  <div class="post-author">Sarah Reynolds</div>
+                </div>
+                <div class="post-info"><span class="post-date">Jan 18, 2025</span><span class="post-read">7 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-c rv" data-cat="insights">
+            <div class="post-img"><img
+                src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=600&q=80&fit=crop" alt="Post" />
+              <div class="post-cat insights">Insights</div>
+            </div>
+            <div class="post-body">
+              <div class="post-title">What 2,400 Events Taught Us About What Audiences Really Want</div>
+              <div class="post-excerpt">After a decade and a half of running world-class events, we've distilled the
+                most surprising lessons about what truly makes an audience feel valued.</div>
+              <div class="post-footer">
+                <div class="post-av-row">
+                  <div class="post-av">AR</div>
+                  <div class="post-author">Alexandra Reed</div>
+                </div>
+                <div class="post-info"><span class="post-date">Jan 5, 2025</span><span class="post-read">10 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-c rv" data-cat="tips">
+            <div class="post-img"><img
+                src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=80&fit=crop" alt="Post" />
+              <div class="post-cat tips">Tips & Tricks</div>
+            </div>
+            <div class="post-body">
+              <div class="post-title">The Ultimate Event Day Checklist: 47 Things to Verify Before Doors Open</div>
+              <div class="post-excerpt">Our event operations team shares the exact checklist they run through on every
+                event day — no matter how big or small the event is.</div>
+              <div class="post-footer">
+                <div class="post-av-row">
+                  <div class="post-av">LA</div>
+                  <div class="post-author">Layla Al-Amin</div>
+                </div>
+                <div class="post-info"><span class="post-date">Dec 20, 2024</span><span class="post-read">12 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-c rv" data-cat="tech">
+            <div class="post-img"><img
+                src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80&fit=crop" alt="Post" />
+              <div class="post-cat tech">Technology</div>
+            </div>
+            <div class="post-body">
+              <div class="post-title">Event Apps in 2025: What to Build, What to Buy, and What to Skip</div>
+              <div class="post-excerpt">We tested 14 event tech platforms so you don't have to. Here's our honest
+                breakdown of what's worth the investment.</div>
+              <div class="post-footer">
+                <div class="post-av-row">
+                  <div class="post-av">JP</div>
+                  <div class="post-author">James Park</div>
+                </div>
+                <div class="post-info"><span class="post-date">Dec 10, 2024</span><span class="post-read">8 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-c rv" data-cat="trends">
+            <div class="post-img"><img
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80&fit=crop" alt="Post" />
+              <div class="post-cat trends">Trends</div>
+            </div>
+            <div class="post-body">
+              <div class="post-title">Sustainable Events Are No Longer Optional — Here's How to Get Started</div>
+              <div class="post-excerpt">From zero-waste catering to carbon-offset programs, sustainability is the new
+                standard in event management. A practical guide to getting certified.</div>
+              <div class="post-footer">
+                <div class="post-av-row">
+                  <div class="post-av">MC</div>
+                  <div class="post-author">Marcus Chen</div>
+                </div>
+                <div class="post-info"><span class="post-date">Nov 28, 2024</span><span class="post-read">6 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-c rv" data-cat="events">
+            <div class="post-img"><img
+                src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600&q=80&fit=crop" alt="Post" />
+              <div class="post-cat events">Events</div>
+            </div>
+            <div class="post-body">
+              <div class="post-title">Case Study: How We Turned a 200-Person Conference into a Global Brand Moment</div>
+              <div class="post-excerpt">One client. One brief. One chance to make history. The story of how strategic
+                event design amplified a brand to 40+ countries in 72 hours.</div>
+              <div class="post-footer">
+                <div class="post-av-row">
+                  <div class="post-av">SR</div>
+                  <div class="post-author">Sarah Reynolds</div>
+                </div>
+                <div class="post-info"><span class="post-date">Nov 15, 2024</span><span class="post-read">11 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination rv">
+          <button class="pg-btn">‹</button>
+          <button class="pg-btn on">1</button>
+          <button class="pg-btn">2</button>
+          <button class="pg-btn">3</button>
+          <button class="pg-btn">...</button>
+          <button class="pg-btn">8</button>
+          <button class="pg-btn">›</button>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-card rv">
+          <h3>Browse Topics</h3>
+          <div class="topic-list">
+            <a href="#" class="topic-item"><span class="topic-nm">All Articles</span><span
+                class="topic-count">48</span></a>
+            <a href="#" class="topic-item"><span class="topic-nm">Events</span><span class="topic-count">14</span></a>
+            <a href="#" class="topic-item"><span class="topic-nm">Insights</span><span class="topic-count">11</span></a>
+            <a href="#" class="topic-item"><span class="topic-nm">Tips & Tricks</span><span
+                class="topic-count">9</span></a>
+            <a href="#" class="topic-item"><span class="topic-nm">Technology</span><span
+                class="topic-count">8</span></a>
+            <a href="#" class="topic-item"><span class="topic-nm">Trends</span><span class="topic-count">6</span></a>
+          </div>
+        </div>
+
+        <div class="sidebar-card rv">
+          <h3>Most Popular</h3>
+          <div class="popular-list">
+            <a href="#" class="popular-item">
+              <div class="popular-thumb"><img
+                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=120&q=70&fit=crop" alt="" /></div>
+              <div>
+                <div class="popular-title">10 Proven Strategies to Maximize Attendee Engagement</div>
+                <div class="popular-date">Feb 28, 2025</div>
+              </div>
+            </a>
+            <a href="#" class="popular-item">
+              <div class="popular-thumb"><img
+                  src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=120&q=70&fit=crop" alt="" /></div>
+              <div>
+                <div class="popular-title">Event Apps in 2025: What to Build, Buy or Skip</div>
+                <div class="popular-date">Dec 10, 2024</div>
+              </div>
+            </a>
+            <a href="#" class="popular-item">
+              <div class="popular-thumb"><img
+                  src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=120&q=70&fit=crop" alt="" /></div>
+              <div>
+                <div class="popular-title">The Ultimate Event Day Checklist: 47 Things</div>
+                <div class="popular-date">Dec 20, 2024</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="sidebar-card rv">
+          <h3>Newsletter</h3>
+          <div class="newsletter-box">
+            <p>Get the latest event insights and industry news delivered to your inbox every week.</p>
+            <input class="nl-input" type="email" placeholder="your@email.com" />
+            <button class="btn-p" onclick="subscribeNL(this)">Subscribe Free</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-outer">
+    <div class="cta-box rv">
+      <h2>Ready to Create Something <em>Extraordinary?</em></h2>
+      <p>Join thousands of professionals who trust Evenza to deliver exceptional event experiences.</p>
+      <div class="cta-btns">
+        <a href="index.html#ct" class="btn-p" style="width:auto">Start Planning</a>
+        <a href="index.html#ev" class="btn-g">View Our Events</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="ft">
+      <div class="fb">
+        <a href="index.html" class="logo">
+          <div class="logo-box">✦</div>Evenza<span class="logo-dot">.</span>
+        </a>
+        <p>We transform your event vision into extraordinary, memorable experiences that inspire and connect people
+          worldwide.</p>
+        <div class="ft-soc">
+          <a href="#" class="fts">in</a><a href="#" class="fts">𝕏</a>
+          <a href="#" class="fts">f</a><a href="#" class="fts">▶</a>
+        </div>
+      </div>
+      <div class="fc">
+        <h4>Quick Links</h4>
+        <ul class="fl">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#ev">Events</a></li>
+          <li><a href="index.html#speakers">Speakers</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="index.html#pr">Tickets</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Services</h4>
+        <ul class="fl">
+          <li><a href="#">Event Planning</a></li>
+          <li><a href="#">Corporate Events</a></li>
+          <li><a href="#">Conferences</a></li>
+          <li><a href="#">Hybrid Events</a></li>
+          <li><a href="#">Exhibitions</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <ul class="fl">
+          <li><a href="#">hello@evenza.com</a></li>
+          <li><a href="#">+971 4 123 4567</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2025 Evenza. All rights reserved.</span>
+      <span>Crafted with ✦ for extraordinary events</span>
+    </div>
+  </footer>
+
+ <script src="about.java"></script>
+</body>
+
+</html>

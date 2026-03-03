@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule – Evenza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="schedule.css">
+
+</head>
+
+<body>
+  <div id="spbar"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-box">✦</div>
+      Evenza<span class="logo-dot">.</span>
+    </a>
+    <ul class="nav-ul">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="schedule.html" class="active">Schedule</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li class="dropdown">
+        <a href="#">Pages ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="index.html#pr" class="nav-btn">Join The Conference</a>
+    <button class="hmb" id="hambBtn" onclick="toggleNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="closeNav()">Home</a>
+    <a href="about.html" onclick="closeNav()">About Us</a>
+    <a href="schedule.html" onclick="closeNav()">Schedule</a>
+    <a href="blog.html" onclick="closeNav()">Blog</a>
+    <div class="mob-sep"></div>
+    <a href="services.html" onclick="closeNav()">Services</a>
+    <a href="speakers.html" onclick="closeNav()">Speakers</a>
+    <a href="Gallery.html" onclick="closeNav()">Gallery</a>
+    <a href="faq.html" onclick="closeNav()">FAQ</a>
+    <a href="pricing.html" onclick="closeNav()">Pricing</a>
+    <div class="mob-sep"></div>
+    <a href="contact.html" onclick="closeNav()">Contact Us</a>
+    <div class="mob-sep"></div>
+    <a href="index.html#pr" class="mob-btn" onclick="closeNav()">Join The Conference</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="pg-hero">
+    <div class="pg-hero-bg"></div>
+    <div class="pg-hero-ov"></div>
+    <div class="pg-hero-grid"></div>
+    <div class="pg-hero-wrap">
+      <div class="breadcrumb fade-in">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span style="color:rgba(255,255,255,.6)">Schedule</span>
+      </div>
+      <div class="pg-lbl fade-in">3-Day Program</div>
+      <h1 class="pg-title fade-in-2">Global Innovation<br />Summit <em>2025</em></h1>
+      <p class="pg-sub fade-in-3">Sep 28–30 · Dubai World Trade Centre · 48 speakers · 2,500 attendees</p>
+    </div>
+  </section>
+
+  <!-- EVENT INFO BAR -->
+  <div class="info-bar">
+    <div class="info-inner">
+      <div class="info-item">
+        <div class="info-ic">📅</div>
+        <div>
+          <div class="info-l">Date</div>
+          <div class="info-v">Sep 28 – 30, 2025</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-ic">📍</div>
+        <div>
+          <div class="info-l">Venue</div>
+          <div class="info-v">Dubai World Trade Centre</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-ic">🎤</div>
+        <div>
+          <div class="info-l">Speakers</div>
+          <div class="info-v">48 World-Class Experts</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-ic">👥</div>
+        <div>
+          <div class="info-l">Attendees</div>
+          <div class="info-v">2,500+ Professionals</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-ic">🌐</div>
+        <div>
+          <div class="info-l">Format</div>
+          <div class="info-v">In-Person & Live Stream</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE -->
+  <div class="sch-wrap">
+    <div class="day-tabs">
+      <div class="day-tab on rv" onclick="switchDay(this,'d1')">
+        <div class="day-tab-num">Day 01</div>
+        <div class="day-tab-date">Sep 28</div>
+        <div class="day-tab-label">Opening Day</div>
+      </div>
+      <div class="day-tab rv" onclick="switchDay(this,'d2')">
+        <div class="day-tab-num">Day 02</div>
+        <div class="day-tab-date">Sep 29</div>
+        <div class="day-tab-label">Innovation Day</div>
+      </div>
+      <div class="day-tab rv" onclick="switchDay(this,'d3')">
+        <div class="day-tab-num">Day 03</div>
+        <div class="day-tab-date">Sep 30</div>
+        <div class="day-tab-label">Closing Day</div>
+      </div>
+    </div>
+
+    <!-- DAY 1 -->
+    <div id="d1" class="day-panel on">
+      <div class="filter-bar rv">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn on" onclick="filterSessions(this,'all')">All</button>
+        <button class="filter-btn" onclick="filterSessions(this,'keynote')">Keynote</button>
+        <button class="filter-btn" onclick="filterSessions(this,'workshop')">Workshop</button>
+        <button class="filter-btn" onclick="filterSessions(this,'panel')">Panel</button>
+        <button class="filter-btn" onclick="filterSessions(this,'networking')">Networking</button>
+      </div>
+      <div class="time-block rv">
+        <div class="time-block-header">
+          <div class="time-block-label">Morning</div>
+          <div class="time-block-line"></div>
+        </div>
+        <div class="sr networking rv" data-type="networking">
+          <div class="sr-t">08:00 – 09:00</div>
+          <div class="sr-body">
+            <div class="sr-n">Registration & Welcome Coffee</div>
+            <div class="sr-w">📍 Main Entrance Hall — Level 1</div>
+            <div class="sr-speakers"><span class="sr-spk">Evenza Team</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b networking">Networking</span><span class="sr-cap">2,500 seats</span>
+          </div>
+        </div>
+        <div class="sr keynote sr-featured rv" data-type="keynote">
+          <div class="sr-t">09:00 – 10:30</div>
+          <div class="sr-body">
+            <div class="sr-n">Opening Keynote: The Future is Now — AI, Innovation & The Decade Ahead</div>
+            <div class="sr-w">📍 Main Stage — Hall A</div>
+            <div class="sr-speakers"><span class="sr-spk">Alexandra Reed</span><span class="sr-spk">CEO, FutureTech
+                Ventures</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b keynote">Keynote</span><span class="sr-cap">2,500 seats</span></div>
+        </div>
+        <div class="sr panel rv" data-type="panel">
+          <div class="sr-t">10:30 – 12:00</div>
+          <div class="sr-body">
+            <div class="sr-n">Panel: Disrupting Traditional Industries — Where Next?</div>
+            <div class="sr-w">📍 Hall A — Main Stage</div>
+            <div class="sr-speakers"><span class="sr-spk">James Morales</span><span class="sr-spk">Sophia
+                Nguyen</span><span class="sr-spk">+3 Guests</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b panel">Panel</span><span class="sr-cap">2,500 seats</span></div>
+        </div>
+      </div>
+      <div class="time-block rv">
+        <div class="time-block-header">
+          <div class="time-block-label">Afternoon</div>
+          <div class="time-block-line"></div>
+        </div>
+        <div class="sr networking rv" data-type="networking">
+          <div class="sr-t">12:00 – 13:30</div>
+          <div class="sr-body">
+            <div class="sr-n">Networking Luncheon</div>
+            <div class="sr-w">📍 Grand Ballroom — Level 2</div>
+            <div class="sr-speakers"><span class="sr-spk">All Attendees</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b lunch">Lunch</span><span class="sr-cap">2,500 seats</span></div>
+        </div>
+        <div class="sr workshop rv" data-type="workshop">
+          <div class="sr-t">14:00 – 15:30</div>
+          <div class="sr-body">
+            <div class="sr-n">Workshop: AI Tools for Business Leaders — Hands-On Session</div>
+            <div class="sr-w">📍 Workshop Room B — Level 3</div>
+            <div class="sr-speakers"><span class="sr-spk">David Khan</span><span class="sr-spk">Harvard Business
+                School</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b workshop">Workshop</span><span class="sr-cap">120 seats</span></div>
+        </div>
+        <div class="sr workshop rv" data-type="workshop">
+          <div class="sr-t">14:00 – 15:30</div>
+          <div class="sr-body">
+            <div class="sr-n">Workshop: Sustainable Finance & ESG Strategy</div>
+            <div class="sr-w">📍 Workshop Room C — Level 3</div>
+            <div class="sr-speakers"><span class="sr-spk">Sophia Nguyen</span><span class="sr-spk">Apex Capital</span>
+            </div>
+          </div>
+          <div class="sr-right"><span class="sr-b workshop">Workshop</span><span class="sr-cap">100 seats</span></div>
+        </div>
+        <div class="sr panel rv" data-type="panel">
+          <div class="sr-t">16:00 – 17:30</div>
+          <div class="sr-body">
+            <div class="sr-n">Fireside Chat: Lessons from Building Billion-Dollar Companies</div>
+            <div class="sr-w">📍 Innovation Arena — Level 1</div>
+            <div class="sr-speakers"><span class="sr-spk">Alexandra Reed</span><span class="sr-spk">James Morales</span>
+            </div>
+          </div>
+          <div class="sr-right"><span class="sr-b panel">Panel</span><span class="sr-cap">800 seats</span></div>
+        </div>
+      </div>
+      <div class="time-block rv">
+        <div class="time-block-header">
+          <div class="time-block-label">Evening</div>
+          <div class="time-block-line"></div>
+        </div>
+        <div class="sr gala rv" data-type="gala">
+          <div class="sr-t">18:00 – 21:00</div>
+          <div class="sr-body">
+            <div class="sr-n">Gala Welcome Dinner & Networking Reception</div>
+            <div class="sr-w">📍 Rooftop Terrace — Level 10</div>
+            <div class="sr-speakers"><span class="sr-spk">All Attendees</span><span class="sr-spk">Live
+                Entertainment</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b gala">Gala</span><span class="sr-cap">Premium Pass+</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div id="d2" class="day-panel">
+      <div class="filter-bar rv">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn on" onclick="filterSessions(this,'all')">All</button>
+        <button class="filter-btn" onclick="filterSessions(this,'keynote')">Keynote</button>
+        <button class="filter-btn" onclick="filterSessions(this,'workshop')">Workshop</button>
+        <button class="filter-btn" onclick="filterSessions(this,'panel')">Panel</button>
+        <button class="filter-btn" onclick="filterSessions(this,'networking')">Networking</button>
+      </div>
+      <div class="time-block rv">
+        <div class="time-block-header">
+          <div class="time-block-label">Morning</div>
+          <div class="time-block-line"></div>
+        </div>
+        <div class="sr keynote sr-featured rv" data-type="keynote">
+          <div class="sr-t">09:00 – 10:30</div>
+          <div class="sr-body">
+            <div class="sr-n">Keynote: The Economics of a Sustainable Future</div>
+            <div class="sr-w">📍 Main Stage — Hall A</div>
+            <div class="sr-speakers"><span class="sr-spk">Sophia Nguyen</span><span class="sr-spk">Managing Director,
+                Apex Capital</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b keynote">Keynote</span><span class="sr-cap">2,500 seats</span></div>
+        </div>
+        <div class="sr panel rv" data-type="panel">
+          <div class="sr-t">11:00 – 12:30</div>
+          <div class="sr-body">
+            <div class="sr-n">Roundtable: ESG Investment Strategies for 2026 and Beyond</div>
+            <div class="sr-w">📍 Hall B — Level 2</div>
+            <div class="sr-speakers"><span class="sr-spk">Multiple Speakers</span><span class="sr-spk">Moderated
+                Discussion</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b panel">Roundtable</span><span class="sr-cap">400 seats</span></div>
+        </div>
+      </div>
+      <div class="time-block rv">
+        <div class="time-block-header">
+          <div class="time-block-label">Afternoon</div>
+          <div class="time-block-line"></div>
+        </div>
+        <div class="sr networking rv" data-type="networking">
+          <div class="sr-t">12:30 – 14:00</div>
+          <div class="sr-body">
+            <div class="sr-n">Networking Lunch — Hosted Tables by Industry</div>
+            <div class="sr-w">📍 Grand Ballroom — Level 2</div>
+            <div class="sr-speakers"><span class="sr-spk">All Attendees</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b lunch">Lunch</span><span class="sr-cap">2,500 seats</span></div>
+        </div>
+        <div class="sr workshop rv" data-type="workshop">
+          <div class="sr-t">14:00 – 16:00</div>
+          <div class="sr-body">
+            <div class="sr-n">Masterclass: Scaling Startups Globally — The Playbook</div>
+            <div class="sr-w">📍 Workshop Room A — Level 3</div>
+            <div class="sr-speakers"><span class="sr-spk">James Morales</span><span class="sr-spk">GlobalSystems
+                Inc.</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b workshop">Masterclass</span><span class="sr-cap">150 seats</span>
+          </div>
+        </div>
+        <div class="sr keynote rv" data-type="keynote">
+          <div class="sr-t">16:30 – 18:00</div>
+          <div class="sr-body">
+            <div class="sr-n">Investor Pitch Competition — Live Finals</div>
+            <div class="sr-w">📍 Innovation Arena — Level 1</div>
+            <div class="sr-speakers"><span class="sr-spk">All Speakers as Judges</span><span class="sr-spk">10 Finalist
+                Startups</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b competition">Competition</span><span class="sr-cap">800 seats</span>
+          </div>
+        </div>
+      </div>
+      <div class="time-block rv">
+        <div class="time-block-header">
+          <div class="time-block-label">Evening</div>
+          <div class="time-block-line"></div>
+        </div>
+        <div class="sr networking rv" data-type="networking">
+          <div class="sr-t">19:00 – 22:00</div>
+          <div class="sr-body">
+            <div class="sr-n">VIP Dinner & Speaker Meetup</div>
+            <div class="sr-w">📍 Private Dining Room — Level 9</div>
+            <div class="sr-speakers"><span class="sr-spk">All 4 Keynote Speakers</span><span class="sr-spk">VIP Guests
+                Only</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b gala">VIP Only</span><span class="sr-cap">Elite Pass only</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div id="d3" class="day-panel">
+      <div class="filter-bar rv">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn on" onclick="filterSessions(this,'all')">All</button>
+        <button class="filter-btn" onclick="filterSessions(this,'keynote')">Keynote</button>
+        <button class="filter-btn" onclick="filterSessions(this,'workshop')">Workshop</button>
+        <button class="filter-btn" onclick="filterSessions(this,'panel')">Panel</button>
+      </div>
+      <div class="time-block rv">
+        <div class="time-block-header">
+          <div class="time-block-label">Morning</div>
+          <div class="time-block-line"></div>
+        </div>
+        <div class="sr keynote sr-featured rv" data-type="keynote">
+          <div class="sr-t">09:00 – 10:30</div>
+          <div class="sr-body">
+            <div class="sr-n">Final Keynote: Leading Tomorrow's World — Macro Trends Shaping Markets</div>
+            <div class="sr-w">📍 Main Stage — Hall A</div>
+            <div class="sr-speakers"><span class="sr-spk">David Khan</span><span class="sr-spk">Professor, Harvard
+                Business School</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b keynote">Keynote</span><span class="sr-cap">2,500 seats</span></div>
+        </div>
+        <div class="sr workshop rv" data-type="workshop">
+          <div class="sr-t">10:30 – 12:00</div>
+          <div class="sr-body">
+            <div class="sr-n">Workshop: Building Your Personal Leadership Brand</div>
+            <div class="sr-w">📍 Workshop Room B — Level 3</div>
+            <div class="sr-speakers"><span class="sr-spk">Alexandra Reed</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b workshop">Workshop</span><span class="sr-cap">120 seats</span></div>
+        </div>
+      </div>
+      <div class="time-block rv">
+        <div class="time-block-header">
+          <div class="time-block-label">Afternoon</div>
+          <div class="time-block-line"></div>
+        </div>
+        <div class="sr panel rv" data-type="panel">
+          <div class="sr-t">11:00 – 12:30</div>
+          <div class="sr-body">
+            <div class="sr-n">Closing Panel: Actionable Takeaways — What You're Doing Differently Next Week</div>
+            <div class="sr-w">📍 Main Stage — Hall A</div>
+            <div class="sr-speakers"><span class="sr-spk">All 4 Keynote Speakers</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b panel">Panel</span><span class="sr-cap">2,500 seats</span></div>
+        </div>
+        <div class="sr networking rv" data-type="networking">
+          <div class="sr-t">13:00 – 14:30</div>
+          <div class="sr-body">
+            <div class="sr-n">Farewell Luncheon, Certificate Ceremony & Group Photo</div>
+            <div class="sr-w">📍 Grand Ballroom — Level 2</div>
+            <div class="sr-speakers"><span class="sr-spk">All Attendees</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b closing">Closing</span><span class="sr-cap">2,500 seats</span></div>
+        </div>
+        <div class="sr panel rv" data-type="panel">
+          <div class="sr-t">15:00 – 16:30</div>
+          <div class="sr-body">
+            <div class="sr-n">1-on-1 Speed Networking with Speakers</div>
+            <div class="sr-w">📍 Speaker Lounge — Level 4</div>
+            <div class="sr-speakers"><span class="sr-spk">All 4 Keynote Speakers</span><span class="sr-spk">Elite Pass
+                Holders</span></div>
+          </div>
+          <div class="sr-right"><span class="sr-b gala">VIP Only</span><span class="sr-cap">Elite Pass only</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VENUE -->
+  <section class="venue">
+    <div class="venue-in">
+      <div class="lbl rv">Location</div>
+      <h2 class="ttl rv">Venue & Rooms</h2>
+      <div class="venue-grid">
+        <div class="venue-map rv">
+          <div class="venue-map-bg"></div>
+          <div class="venue-map-overlay">
+            <span class="pin">📍</span>
+            <p>Dubai World Trade Centre<br />Sheikh Zayed Road, Dubai</p>
+          </div>
+        </div>
+        <div class="venue-rooms rv">
+          <div class="venue-room">
+            <div class="venue-room-ic">🎤</div>
+            <div>
+              <div class="venue-room-nm">Main Stage — Hall A</div>
+              <div class="venue-room-dt">Capacity: 2,500 · Keynotes & Major Panels</div>
+            </div>
+          </div>
+          <div class="venue-room">
+            <div class="venue-room-ic">🗣️</div>
+            <div>
+              <div class="venue-room-nm">Hall B — Level 2</div>
+              <div class="venue-room-dt">Capacity: 400 · Roundtables & Panels</div>
+            </div>
+          </div>
+          <div class="venue-room">
+            <div class="venue-room-ic">⚡</div>
+            <div>
+              <div class="venue-room-nm">Innovation Arena — Level 1</div>
+              <div class="venue-room-dt">Capacity: 800 · Competitions & Firesides</div>
+            </div>
+          </div>
+          <div class="venue-room">
+            <div class="venue-room-ic">🛠️</div>
+            <div>
+              <div class="venue-room-nm">Workshop Rooms A, B, C — Level 3</div>
+              <div class="venue-room-dt">Capacity: 100–150 each · Hands-on Sessions</div>
+            </div>
+          </div>
+          <div class="venue-room">
+            <div class="venue-room-ic">🍽️</div>
+            <div>
+              <div class="venue-room-nm">Grand Ballroom — Level 2</div>
+              <div class="venue-room-dt">Capacity: 2,500 · Lunches & Ceremonies</div>
+            </div>
+          </div>
+          <div class="venue-room">
+            <div class="venue-room-ic">🌃</div>
+            <div>
+              <div class="venue-room-nm">Rooftop Terrace — Level 10</div>
+              <div class="venue-room-dt">Capacity: 600 · Gala Dinner & Evening Events</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKERS -->
+  <section class="spk-quick">
+    <div class="lbl rv">Speakers</div>
+    <h2 class="ttl rv">Confirmed Speakers</h2>
+    <div class="spk-row">
+      <a href="index.html#speakers" class="spk-chip rv">
+        <div class="spk-chip-av">AR</div>
+        <div>
+          <div class="spk-chip-nm">Alexandra Reed</div>
+          <div class="spk-chip-rl">CEO, FutureTech Ventures</div>
+        </div>
+      </a>
+      <a href="index.html#speakers" class="spk-chip rv">
+        <div class="spk-chip-av">JM</div>
+        <div>
+          <div class="spk-chip-nm">James Morales</div>
+          <div class="spk-chip-rl">CIO, GlobalSystems Inc.</div>
+        </div>
+      </a>
+      <a href="index.html#speakers" class="spk-chip rv">
+        <div class="spk-chip-av">SN</div>
+        <div>
+          <div class="spk-chip-nm">Sophia Nguyen</div>
+          <div class="spk-chip-rl">MD, Apex Capital</div>
+        </div>
+      </a>
+      <a href="index.html#speakers" class="spk-chip rv">
+        <div class="spk-chip-av">DK</div>
+        <div>
+          <div class="spk-chip-nm">David Khan</div>
+          <div class="spk-chip-rl">Professor, Harvard Business School</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-outer">
+    <div class="cta-box rv">
+      <h2>Secure Your Spot at <em>GIS 2025</em></h2>
+      <p>Limited seats available. Register now to join 2,500 global professionals at the year's most anticipated summit.
+      </p>
+      <div class="cta-btns">
+        <a href="index.html#pr" class="btn-p">Get Your Ticket</a>
+        <a href="index.html#ct" class="btn-g">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="ft">
+      <div class="fb">
+        <a href="index.html" class="logo">
+          <div class="logo-box">✦</div>Evenza<span class="logo-dot">.</span>
+        </a>
+        <p>We transform your event vision into extraordinary, memorable experiences that inspire and connect people
+          worldwide.</p>
+        <div class="ft-soc"><a href="#" class="fts">in</a><a href="#" class="fts">𝕏</a><a href="#" class="fts">f</a><a
+            href="#" class="fts">▶</a></div>
+      </div>
+      <div class="fc">
+        <h4>Quick Links</h4>
+        <ul class="fl">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#ev">Events</a></li>
+          <li><a href="index.html#speakers">Speakers</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="index.html#pr">Tickets</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Services</h4>
+        <ul class="fl">
+          <li><a href="#">Event Planning</a></li>
+          <li><a href="#">Corporate Events</a></li>
+          <li><a href="#">Conferences</a></li>
+          <li><a href="#">Hybrid Events</a></li>
+          <li><a href="#">Exhibitions</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <ul class="fl">
+          <li><a href="#">hello@evenza.com</a></li>
+          <li><a href="#">+971 4 123 4567</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2025 Evenza. All rights reserved.</span>
+      <span>Crafted with ✦ for extraordinary events</span>
+    </div>
+  </footer>
+
+ <script src="schedule.java"></script>
+</body>
+
+</html>

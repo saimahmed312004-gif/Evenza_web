@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Evenza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="about.css">
+
+</head>
+
+<body>
+  <div id="spbar"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-box">✦</div>
+      Evenza<span class="logo-dot">.</span>
+    </a>
+    <ul class="nav-ul">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li class="dropdown">
+        <a href="#">Pages ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="index.html#pr" class="nav-btn">Join The Conference</a>
+    <button class="hmb" id="hambBtn" onclick="toggleNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="closeNav()">Home</a>
+    <a href="about.html" onclick="closeNav()">About Us</a>
+    <a href="schedule.html" onclick="closeNav()">Schedule</a>
+    <a href="blog.html" onclick="closeNav()">Blog</a>
+    <div class="mob-sep"></div>
+    <a href="services.html" onclick="closeNav()">Services</a>
+    <a href="speakers.html" onclick="closeNav()">Speakers</a>
+    <a href="Gallery.html" onclick="closeNav()">Gallery</a>
+    <a href="faq.html" onclick="closeNav()">FAQ</a>
+    <a href="pricing.html" onclick="closeNav()">Pricing</a>
+    <div class="mob-sep"></div>
+    <a href="contact.html" onclick="closeNav()">Contact Us</a>
+    <div class="mob-sep"></div>
+    <a href="index.html#pr" class="mob-btn" onclick="closeNav()">Join The Conference</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="pg-hero">
+    <div class="pg-hero-bg"></div>
+    <div class="pg-hero-ov"></div>
+    <div class="pg-hero-grid"></div>
+    <div class="pg-hero-wrap">
+      <div class="breadcrumb fade-in">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span style="color:rgba(255,255,255,.6)">About Us</span>
+      </div>
+      <div class="pg-lbl fade-in">Our Story</div>
+      <h1 class="pg-title fade-in-2">The People Behind<br /><em>Extraordinary</em> Events</h1>
+      <p class="pg-sub fade-in-3">12 years. 40+ countries. Over 2,000 world-class events. We are Evenza — built on
+        passion, precision, and purpose.</p>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stat-bar">
+    <div class="stat-inner">
+      <div class="stat-item rv">
+        <div class="stat-n"><span>12+</span></div>
+        <div class="stat-l">Years of Excellence</div>
+      </div>
+      <div class="stat-item rv">
+        <div class="stat-n"><span>2,400+</span></div>
+        <div class="stat-l">Events Delivered</div>
+      </div>
+      <div class="stat-item rv">
+        <div class="stat-n"><span>40+</span></div>
+        <div class="stat-l">Countries Reached</div>
+      </div>
+      <div class="stat-item rv">
+        <div class="stat-n"><span>98%</span></div>
+        <div class="stat-l">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OUR STORY -->
+  <section class="story">
+    <div class="lbl rv">Who We Are</div>
+    <h2 class="ttl rv">A Legacy Built on<br /><span>Passion & Precision</span></h2>
+    <div class="story-grid">
+      <div class="story-img rv">
+        <div class="story-img-float">
+          <div class="ic">🌍</div>
+          <div class="tx">
+            <div class="n">40+</div>
+            <div class="l">Global Partners</div>
+          </div>
+        </div>
+        <div class="story-img-main">
+          <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80&fit=crop"
+            alt="Evenza Team" />
+        </div>
+        <div class="story-img-badge">
+          <div class="n">2012</div>
+          <div class="l">Founded</div>
+        </div>
+      </div>
+      <div class="story-txt rv">
+        <p>Evenza was founded in 2012 with a single, powerful belief — that every event, no matter the size, deserves to
+          be extraordinary. What started as a small team of three passionate event professionals in Dubai has grown into
+          a globally respected event management powerhouse.</p>
+        <p>Today, we operate across six continents, partnering with Fortune 500 companies, government bodies, tech
+          giants, and cultural institutions to create events that don't just happen — they resonate, inspire, and
+          transform the people who experience them.</p>
+        <p>From a 50-person CEO roundtable to a 15,000-seat international summit, we approach every project with the
+          same relentless attention to detail, the same creative courage, and the same commitment to excellence that has
+          defined us from day one.</p>
+        <div class="story-tags">
+          <span class="story-tag">Event Strategy</span>
+          <span class="story-tag">Stage & Production</span>
+          <span class="story-tag">Hybrid Events</span>
+          <span class="story-tag">Global Summits</span>
+          <span class="story-tag">Corporate Galas</span>
+          <span class="story-tag">Product Launches</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="values-in">
+      <div class="lbl rv">What Drives Us</div>
+      <h2 class="ttl rv">Our Core Values</h2>
+      <p class="st rv">These are the principles that guide every decision, every detail, and every event we create.</p>
+      <div class="values-grid">
+        <div class="val-c rv">
+          <div class="val-ic">🎯</div>
+          <div class="val-n">Precision First</div>
+          <div class="val-t">We believe that excellence lives in the details. From floor plans to lighting cues, every
+            element is planned with surgical precision to create seamless, flawless experiences.</div>
+        </div>
+        <div class="val-c rv">
+          <div class="val-ic">💡</div>
+          <div class="val-n">Bold Innovation</div>
+          <div class="val-t">We never settle for the ordinary. Our creative team constantly pushes boundaries, bringing
+            fresh ideas and cutting-edge technology to transform conventional events into memorable moments.</div>
+        </div>
+        <div class="val-c rv">
+          <div class="val-ic">🤝</div>
+          <div class="val-n">Client Partnership</div>
+          <div class="val-t">Your vision is our mission. We don't just execute briefs — we become true partners in your
+            success, investing deeply in understanding your goals and bringing them to life beyond expectation.</div>
+        </div>
+        <div class="val-c rv">
+          <div class="val-ic">🌱</div>
+          <div class="val-n">Sustainable Practice</div>
+          <div class="val-t">We're committed to reducing the environmental footprint of every event. From eco-friendly
+            materials to carbon-offset programs, sustainability is embedded in everything we do.</div>
+        </div>
+        <div class="val-c rv">
+          <div class="val-ic">🌐</div>
+          <div class="val-n">Global Perspective</div>
+          <div class="val-t">With teams and partners across 40+ countries, we bring a rich global perspective combined
+            with deep local knowledge to every project, no matter where in the world it takes place.</div>
+        </div>
+        <div class="val-c rv">
+          <div class="val-ic">✨</div>
+          <div class="val-n">Passion for Impact</div>
+          <div class="val-t">We measure success not just in flawless execution but in the lasting impact an event
+            creates — the connections forged, ideas sparked, and memories made that endure long after the lights go
+            down.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team">
+    <div class="lbl rv">The Team</div>
+    <h2 class="ttl rv">Leadership That Leads</h2>
+    <p class="st rv">Meet the visionaries driving Evenza's global mission.</p>
+    <div class="team-grid">
+      <div class="tm-c rv">
+        <div class="tm-ph">
+          <div class="tm-ph-bg"></div>
+          <div class="tm-av">SR</div>
+          <div class="tm-ov">
+            <p class="tm-bio">20+ years in global event production. Pioneered hybrid-first event strategy for Fortune
+              100 companies.</p>
+            <div class="tm-soc"><a href="#" class="tsb">in</a><a href="#" class="tsb">𝕏</a></div>
+          </div>
+        </div>
+        <div class="tm-inf">
+          <div class="tm-nm">Sarah Reynolds</div>
+          <div class="tm-rl">CEO & Co-Founder</div>
+          <div class="tm-exp">20 years experience</div>
+        </div>
+      </div>
+      <div class="tm-c rv">
+        <div class="tm-ph">
+          <div class="tm-ph-bg"></div>
+          <div class="tm-av">MC</div>
+          <div class="tm-ov">
+            <p class="tm-bio">Former creative director at WPP. Transformed Evenza's visual identity and brand experience
+              philosophy.</p>
+            <div class="tm-soc"><a href="#" class="tsb">in</a><a href="#" class="tsb">𝕏</a></div>
+          </div>
+        </div>
+        <div class="tm-inf">
+          <div class="tm-nm">Marcus Chen</div>
+          <div class="tm-rl">Chief Creative Officer</div>
+          <div class="tm-exp">15 years experience</div>
+        </div>
+      </div>
+      <div class="tm-c rv">
+        <div class="tm-ph">
+          <div class="tm-ph-bg"></div>
+          <div class="tm-av">LA</div>
+          <div class="tm-ov">
+            <p class="tm-bio">Leads Evenza's international expansion. Manages relationships across 40+ country
+              partnerships.</p>
+            <div class="tm-soc"><a href="#" class="tsb">in</a><a href="#" class="tsb">𝕏</a></div>
+          </div>
+        </div>
+        <div class="tm-inf">
+          <div class="tm-nm">Layla Al-Amin</div>
+          <div class="tm-rl">Chief Operations Officer</div>
+          <div class="tm-exp">12 years experience</div>
+        </div>
+      </div>
+      <div class="tm-c rv">
+        <div class="tm-ph">
+          <div class="tm-ph-bg"></div>
+          <div class="tm-av">JP</div>
+          <div class="tm-ov">
+            <p class="tm-bio">Technology strategist specialising in immersive event experiences, AR/VR integrations, and
+              live-streaming.</p>
+            <div class="tm-soc"><a href="#" class="tsb">in</a><a href="#" class="tsb">𝕏</a></div>
+          </div>
+        </div>
+        <div class="tm-inf">
+          <div class="tm-nm">James Park</div>
+          <div class="tm-rl">Head of Technology</div>
+          <div class="tm-exp">10 years experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline">
+    <div class="timeline-in">
+      <div class="lbl rv">Our Journey</div>
+      <h2 class="ttl rv">12 Years of <span>Milestones</span></h2>
+      <div class="tl-wrap">
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2012</div>
+          <div class="tl-head">Founded in Dubai</div>
+          <div class="tl-txt">Evenza was born in a small Dubai office with three co-founders, a laptop, and an
+            unshakeable belief that events should be extraordinary. Our first client: a 200-person regional technology
+            conference.</div>
+        </div>
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2015</div>
+          <div class="tl-head">First International Expansion</div>
+          <div class="tl-txt">We opened our second office in Singapore, marking our entry into the Asia-Pacific market.
+            That year, we delivered our 100th event and earned our first global industry award for innovation in event
+            design.</div>
+        </div>
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2018</div>
+          <div class="tl-head">Landmark 10,000-Seat Summit</div>
+          <div class="tl-txt">We produced the Global Future Leaders Summit in London — our largest event to date, with
+            10,000 attendees across 3 days, 120 speakers, and live-streamed to 2.3 million people worldwide. A defining
+            moment in our history.</div>
+        </div>
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2020</div>
+          <div class="tl-head">Pioneering the Hybrid Era</div>
+          <div class="tl-txt">When the world changed overnight, we led the industry's pivot to hybrid events. We
+            launched our proprietary event technology platform, delivering over 300 hybrid experiences across 28
+            countries within 12 months.</div>
+        </div>
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2023</div>
+          <div class="tl-head">40+ Countries, 2,000+ Events</div>
+          <div class="tl-txt">We crossed the milestone of 2,000 events delivered across 40+ countries, with offices in
+            Dubai, Singapore, London, New York, and Sydney. Named Best Global Event Agency for the third consecutive
+            year.</div>
+        </div>
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025</div>
+          <div class="tl-head">The Next Chapter</div>
+          <div class="tl-txt">We're expanding our AI-powered event planning tools, launching our sustainability
+            certification program, and building toward our most ambitious year yet — with the Global Innovation Summit
+            2025 set to be our biggest event in history.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners">
+    <div class="lbl rv">Trusted By</div>
+    <h2 class="ttl rv">Our Global Partners</h2>
+    <div class="pt-grid">
+      <div class="pt-c rv"><span>Microsoft</span></div>
+      <div class="pt-c rv"><span>Google</span></div>
+      <div class="pt-c rv"><span>Amazon</span></div>
+      <div class="pt-c rv"><span>Forbes</span></div>
+      <div class="pt-c rv"><span>Bloomberg</span></div>
+      <div class="pt-c rv"><span>Salesforce</span></div>
+      <div class="pt-c rv"><span>Deloitte</span></div>
+      <div class="pt-c rv"><span>McKinsey</span></div>
+      <div class="pt-c rv"><span>Goldman</span></div>
+      <div class="pt-c rv"><span>HSBC</span></div>
+      <div class="pt-c rv"><span>Siemens</span></div>
+      <div class="pt-c rv"><span>Samsung</span></div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="awards">
+    <div class="awards-in">
+      <div class="lbl rv">Recognition</div>
+      <h2 class="ttl rv">Awards & Achievements</h2>
+      <div class="aw-grid">
+        <div class="aw-c rv">
+          <div class="aw-ic">🏆</div>
+          <div>
+            <div class="aw-year">2023 · 2022 · 2021</div>
+            <div class="aw-nm">Best Global Event Agency</div>
+            <div class="aw-org">International Event Awards</div>
+          </div>
+        </div>
+        <div class="aw-c rv">
+          <div class="aw-ic">⭐</div>
+          <div>
+            <div class="aw-year">2023</div>
+            <div class="aw-nm">Innovation in Hybrid Events</div>
+            <div class="aw-org">EMEA Event Excellence Awards</div>
+          </div>
+        </div>
+        <div class="aw-c rv">
+          <div class="aw-ic">🌱</div>
+          <div>
+            <div class="aw-year">2023</div>
+            <div class="aw-nm">Sustainability Leader Award</div>
+            <div class="aw-org">Green Events Global</div>
+          </div>
+        </div>
+        <div class="aw-c rv">
+          <div class="aw-ic">🎤</div>
+          <div>
+            <div class="aw-year">2022</div>
+            <div class="aw-nm">Best Conference Production</div>
+            <div class="aw-org">Asia-Pacific Events Awards</div>
+          </div>
+        </div>
+        <div class="aw-c rv">
+          <div class="aw-ic">💼</div>
+          <div>
+            <div class="aw-year">2021</div>
+            <div class="aw-nm">Top Corporate Events Company</div>
+            <div class="aw-org">Forbes Middle East</div>
+          </div>
+        </div>
+        <div class="aw-c rv">
+          <div class="aw-ic">🚀</div>
+          <div>
+            <div class="aw-year">2020</div>
+            <div class="aw-nm">Hybrid Events Pioneer</div>
+            <div class="aw-org">Event Technology Awards</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-outer">
+    <div class="cta-box rv">
+      <h2>Ready to Work With <em>The Best?</em></h2>
+      <p>Let's bring your vision to life. Our team is ready to create something extraordinary with you.</p>
+      <div class="cta-btns">
+        <a href="index.html#ct" class="btn-p">Start a Project</a>
+        <a href="index.html#ev" class="btn-g">View Our Events</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="ft">
+      <div class="fb">
+        <a href="index.html" class="logo">
+          <div class="logo-box">✦</div>Evenza<span class="logo-dot">.</span>
+        </a>
+        <p>We transform your event vision into extraordinary, memorable experiences that inspire and connect people
+          worldwide.</p>
+        <div class="ft-soc">
+          <a href="#" class="fts">in</a><a href="#" class="fts">𝕏</a>
+          <a href="#" class="fts">f</a><a href="#" class="fts">▶</a>
+        </div>
+      </div>
+      <div class="fc">
+        <h4>Quick Links</h4>
+        <ul class="fl">
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#ev">Events</a></li>
+          <li><a href="index.html#speakers">Speakers</a></li>
+          <li><a href="index.html#sch">Schedule</a></li>
+          <li><a href="index.html#pr">Tickets</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Services</h4>
+        <ul class="fl">
+          <li><a href="#">Event Planning</a></li>
+          <li><a href="#">Corporate Events</a></li>
+          <li><a href="#">Conferences</a></li>
+          <li><a href="#">Hybrid Events</a></li>
+          <li><a href="#">Exhibitions</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <ul class="fl">
+          <li><a href="#">hello@evenza.com</a></li>
+          <li><a href="#">+971 4 123 4567</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2025 Evenza. All rights reserved.</span>
+      <span>Crafted with ✦ for extraordinary events</span>
+    </div>
+  </footer>
+
+<script src="about.java"></script>
+</body>
+
+</html>

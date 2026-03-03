@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evenza – Event & Conference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="index.css">
+ 
+</head>
+
+<body>
+
+  <div id="spbar"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#" class="logo">
+      <div class="logo-box">✦</div>
+      Evenza<span class="logo-dot">.</span>
+    </a>
+    <ul class="nav-ul">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li class="dropdown">
+        <a href="#">Pages ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="#pr" class="nav-btn">Join The Conference</a>
+    <button class="hmb" id="hambBtn" onclick="toggleNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="closeNav()">Home</a>
+    <a href="about.html" onclick="closeNav()">About Us</a>
+    <a href="schedule.html" onclick="closeNav()">Schedule</a>
+    <a href="blog.html" onclick="closeNav()">Blog</a>
+    <div class="mob-sep"></div>
+    <a href="services.html" onclick="closeNav()">Services</a>
+    <a href="speakers.html" onclick="closeNav()">Speakers</a>
+    <a href="Gallery.html" onclick="closeNav()">Gallery</a>
+    <a href="faq.html" onclick="closeNav()">FAQ</a>
+    <div class="mob-sep"></div>
+    <a href="contact.html" onclick="closeNav()">Contact Us</a>
+    <div class="mob-sep"></div>
+    <a href="#pr" class="mob-btn" onclick="closeNav()">Join The Conference</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-photo"></div>
+    <div class="hero-grad"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-wrap">
+      <!-- LEFT TEXT -->
+      <div class="hero-left">
+        <div class="badge">
+          <div class="badge-icon">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=80&q=70&fit=crop&crop=faces"
+              alt="event crowd" />
+          </div>
+          <span class="badge-txt">Ideas that spark change.</span>
+        </div>
+        <h1 class="h1">
+          Event planned
+          <span class="h1-pill">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=120&q=70&fit=crop&crop=center"
+              alt="event people" />
+          </span>
+          with<br />precision &amp; heart
+          <span class="h1-circle">🔗</span>
+        </h1>
+        <p class="sub">
+          From concept to completion, we handle every detail with precision and care to create events that truly reflect
+          your vision and purpose.<span class="dot"></span>
+        </p>
+        <div class="btns">
+          <a href="#pr" class="btn-p">Get Started Now</a>
+          <a href="#ev" class="btn-g">View Upcoming Events</a>
+        </div>
+        <div class="cd-wrap">
+          <div class="cd-label">Upcoming Speaker Reveal – Don't Miss Out</div>
+          <div class="cd-row">
+            <div class="cd-unit"><span class="cd-n" id="cdd">00</span><span class="cd-l">Days</span></div>
+            <span class="cd-c">:</span>
+            <div class="cd-unit"><span class="cd-n" id="cdh">00</span><span class="cd-l">Hours</span></div>
+            <span class="cd-c">:</span>
+            <div class="cd-unit"><span class="cd-n" id="cdm">00</span><span class="cd-l">Mins</span></div>
+            <span class="cd-c">:</span>
+            <div class="cd-unit"><span class="cd-n" id="cds">00</span><span class="cd-l">Secs</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT IMAGE -->
+      <div class="hero-right">
+        <div class="hero-right-glow"></div>
+        <img src="hero-image-metal.png" alt="Speaker on stage" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+  <section class="spn">
+    <div class="spn-inner">
+      <div class="spn-lbl">Trusted by world-class brands</div>
+      <div class="spn-row">
+        <div class="spn-item">Microsoft</div>
+        <div class="spn-item">Google</div>
+        <div class="spn-item">Salesforce</div>
+        <div class="spn-item">Oracle</div>
+        <div class="spn-item">Amazon</div>
+        <div class="spn-item">Adobe</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="ab" id="about">
+    <div class="ab-inner">
+      <div class="rv">
+        <div class="ab-img">
+          <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80&fit=crop" alt="Event" />
+        </div>
+      </div>
+      <div class="rv">
+        <div class="ab-tag">About Us</div>
+        <h2 class="ab-title">We Create <span>Extraordinary</span><br />Event Experiences</h2>
+        <p class="ab-txt">Evenza is a premier event management company with 12+ years of expertise transforming visions
+          into world-class realities — from intimate CEO roundtables to 10,000-seat international summits across 40+
+          countries.</p>
+        <div class="ab-feats">
+          <div class="ab-feat">
+            <div class="ab-feat-ic">🎯</div>
+            <div>
+              <h4>Strategic Planning</h4>
+              <p>Data-driven strategies that maximise impact and attendee engagement.</p>
+            </div>
+          </div>
+          <div class="ab-feat">
+            <div class="ab-feat-ic">✨</div>
+            <div>
+              <h4>Premium Production</h4>
+              <p>World-class stage design, lighting, and AV for unforgettable experiences.</p>
+            </div>
+          </div>
+          <div class="ab-feat">
+            <div class="ab-feat-ic">🌐</div>
+            <div>
+              <h4>Global Reach</h4>
+              <p>Partners in 40+ countries with global expertise and local knowledge.</p>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="btn-p">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="ev" id="ev">
+    <div class="ev-in">
+      <div class="lbl">Upcoming</div>
+      <h2 class="ttl">Events That Define Moments</h2>
+      <div class="ev-grid">
+        <div class="ev-c rv">
+          <div class="ev-dt">28</div>
+          <div class="ev-cat">Conference · Sep</div>
+          <div class="ev-nm">Global Innovation Summit 2025</div>
+          <div class="ev-meta"><span>📍 Dubai World Trade Centre</span><span>👥 2,500 Attendees · 🎤 48 Speakers</span>
+          </div>
+          <a href="#" class="ev-lnk">Learn More →</a>
+        </div>
+        <div class="ev-c rv">
+          <div class="ev-dt">14</div>
+          <div class="ev-cat">Workshop · Oct</div>
+          <div class="ev-nm">Future of Tech Leadership Forum</div>
+          <div class="ev-meta"><span>📍 Singapore Expo Centre</span><span>👥 800 Attendees · 🎤 24 Speakers</span></div>
+          <a href="#" class="ev-lnk">Learn More →</a>
+        </div>
+        <div class="ev-c rv">
+          <div class="ev-dt">05</div>
+          <div class="ev-cat">Gala · Nov</div>
+          <div class="ev-nm">Annual Business Excellence Awards</div>
+          <div class="ev-meta"><span>📍 London Hilton, Mayfair</span><span>👥 1,200 Attendees · 🎤 16 Speakers</span>
+          </div>
+          <a href="#" class="ev-lnk">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKERS -->
+  <section class="spk" id="speakers">
+    <div class="lbl">Meet the Experts</div>
+    <h2 class="ttl">World-Class Speakers</h2>
+    <p class="st">Industry leaders and visionaries sharing insights that inspire and transform.</p>
+    <div class="spk-grid">
+      <div class="spk-c rv">
+        <div class="spk-ph">
+          <div class="spk-bg"></div>
+          <div class="spk-av">AR</div>
+          <div class="spk-ov">
+            <p class="spk-bio">Visionary tech entrepreneur, 20+ years building global companies.</p>
+            <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+          </div>
+        </div>
+        <div class="spk-inf">
+          <div class="spk-nm">Alexandra Reed</div>
+          <div class="spk-rl">CEO & Founder</div>
+          <div class="spk-og">FutureTech Ventures</div>
+          <div class="spk-tp">The Next Decade of AI: What Leaders Must Know</div>
+        </div>
+      </div>
+      <div class="spk-c rv">
+        <div class="spk-ph">
+          <div class="spk-bg"></div>
+          <div class="spk-av">JM</div>
+          <div class="spk-ov">
+            <p class="spk-bio">Chief Innovation Officer scaling global enterprises across continents.</p>
+            <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+          </div>
+        </div>
+        <div class="spk-inf">
+          <div class="spk-nm">James Morales</div>
+          <div class="spk-rl">Chief Innovation Officer</div>
+          <div class="spk-og">GlobalSystems Inc.</div>
+          <div class="spk-tp">Disruption as Strategy: Building Resilient Businesses</div>
+        </div>
+      </div>
+      <div class="spk-c rv">
+        <div class="spk-ph">
+          <div class="spk-bg"></div>
+          <div class="spk-av">SN</div>
+          <div class="spk-ov">
+            <p class="spk-bio">Managing Director leading sustainable investment across 3 continents.</p>
+            <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+          </div>
+        </div>
+        <div class="spk-inf">
+          <div class="spk-nm">Sophia Nguyen</div>
+          <div class="spk-rl">Managing Director</div>
+          <div class="spk-og">Apex Capital</div>
+          <div class="spk-tp">Sustainable Investment: ESG in the Modern Portfolio</div>
+        </div>
+      </div>
+      <div class="spk-c rv">
+        <div class="spk-ph">
+          <div class="spk-bg"></div>
+          <div class="spk-av">DK</div>
+          <div class="spk-ov">
+            <p class="spk-bio">Harvard Economics Professor and former World Bank advisor.</p>
+            <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+          </div>
+        </div>
+        <div class="spk-inf">
+          <div class="spk-nm">David Khan</div>
+          <div class="spk-rl">Professor of Economics</div>
+          <div class="spk-og">Harvard Business School</div>
+          <div class="spk-tp">Global Macro Trends Shaping Tomorrow's Markets</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="sch" id="sch">
+    <div class="lbl">Program</div>
+    <h2 class="ttl">Event Schedule</h2>
+    <div class="tabs">
+      <button class="tab on" onclick="st(this,'d1')">Day 1 — Sep 28</button>
+      <button class="tab" onclick="st(this,'d2')">Day 2 — Sep 29</button>
+      <button class="tab" onclick="st(this,'d3')">Day 3 — Sep 30</button>
+    </div>
+    <div id="d1" class="tp on">
+      <div class="sr rv">
+        <div class="sr-t">08:00–09:00</div>
+        <div>
+          <div class="sr-n">Registration & Welcome Coffee</div>
+          <div class="sr-w">Main Entrance Hall</div>
+        </div>
+        <div class="sr-b">Networking</div>
+      </div>
+      <div class="sr rv">
+        <div class="sr-t">09:00–10:30</div>
+        <div>
+          <div class="sr-n">Opening Keynote: The Future is Now</div>
+          <div class="sr-w">Alexandra Reed · Main Stage</div>
+        </div>
+        <div class="sr-b">Keynote</div>
+      </div>
+      <div class="sr rv">
+        <div class="sr-t">10:30–12:00</div>
+        <div>
+          <div class="sr-n">Panel: Disrupting Traditional Industries</div>
+          <div class="sr-w">James Morales & Guests · Hall A</div>
+        </div>
+        <div class="sr-b">Panel</div>
+      </div>
+      <div class="sr rv">
+        <div class="sr-t">12:00–13:30</div>
+        <div>
+          <div class="sr-n">Networking Luncheon</div>
+          <div class="sr-w">Grand Ballroom</div>
+        </div>
+        <div class="sr-b">Lunch</div>
+      </div>
+      <div class="sr rv">
+        <div class="sr-t">14:00–15:30</div>
+        <div>
+          <div class="sr-n">Workshop: AI Tools for Business Leaders</div>
+          <div class="sr-w">David Khan · Workshop Room B</div>
+        </div>
+        <div class="sr-b">Workshop</div>
+      </div>
+      <div class="sr rv">
+        <div class="sr-t">18:00–21:00</div>
+        <div>
+          <div class="sr-n">Gala Welcome Dinner</div>
+          <div class="sr-w">Rooftop Terrace</div>
+        </div>
+        <div class="sr-b">Gala</div>
+      </div>
+    </div>
+    <div id="d2" class="tp">
+      <div class="sr">
+        <div class="sr-t">09:00–10:30</div>
+        <div>
+          <div class="sr-n">Sustainable Economics Keynote</div>
+          <div class="sr-w">Sophia Nguyen · Main Stage</div>
+        </div>
+        <div class="sr-b">Keynote</div>
+      </div>
+      <div class="sr">
+        <div class="sr-t">11:00–12:30</div>
+        <div>
+          <div class="sr-n">Roundtable: ESG Investment Strategies</div>
+          <div class="sr-w">Multiple Speakers · Hall B</div>
+        </div>
+        <div class="sr-b">Roundtable</div>
+      </div>
+      <div class="sr">
+        <div class="sr-t">14:00–16:00</div>
+        <div>
+          <div class="sr-n">Masterclass: Scaling Startups Globally</div>
+          <div class="sr-w">James Morales · Workshop Room A</div>
+        </div>
+        <div class="sr-b">Workshop</div>
+      </div>
+      <div class="sr">
+        <div class="sr-t">16:30–18:00</div>
+        <div>
+          <div class="sr-n">Investor Pitch Competition</div>
+          <div class="sr-w">All Speakers · Innovation Arena</div>
+        </div>
+        <div class="sr-b">Competition</div>
+      </div>
+    </div>
+    <div id="d3" class="tp">
+      <div class="sr">
+        <div class="sr-t">09:00–10:30</div>
+        <div>
+          <div class="sr-n">Final Keynote: Leading Tomorrow's World</div>
+          <div class="sr-w">David Khan · Main Stage</div>
+        </div>
+        <div class="sr-b">Keynote</div>
+      </div>
+      <div class="sr">
+        <div class="sr-t">11:00–12:30</div>
+        <div>
+          <div class="sr-n">Closing Panel: Actionable Takeaways</div>
+          <div class="sr-w">All Speakers · Main Stage</div>
+        </div>
+        <div class="sr-b">Panel</div>
+      </div>
+      <div class="sr">
+        <div class="sr-t">13:00–14:30</div>
+        <div>
+          <div class="sr-n">Farewell Luncheon & Certificates</div>
+          <div class="sr-w">Grand Ballroom</div>
+        </div>
+        <div class="sr-b">Closing</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pr" id="pr">
+    <div class="pr-in">
+      <div class="lbl">Tickets</div>
+      <h2 class="ttl">Choose Your Experience</h2>
+      <p class="st">Secure your place at the most anticipated event of the year.</p>
+      <div class="pr-grid">
+        <div class="pc rv">
+          <div class="p-plan">Standard Pass</div>
+          <div class="p-price"><sup>$</sup>299</div>
+          <div class="p-desc">Per person / 3-Day Access</div>
+          <ul class="p-lst">
+            <li>Full 3-Day Conference Access</li>
+            <li>Event Materials & Recordings</li>
+            <li>Networking Sessions</li>
+            <li>Welcome Luncheon</li>
+            <li class="off">VIP Dinner Access</li>
+            <li class="off">1-on-1 Speaker Sessions</li>
+          </ul>
+          <a href="#ct" class="p-btn o">Register Now</a>
+        </div>
+        <div class="pc feat rv">
+          <div class="p-plan">Premium Pass</div>
+          <div class="p-price"><sup>$</sup>599</div>
+          <div class="p-desc">Per person / 3-Day Access</div>
+          <ul class="p-lst">
+            <li>Full 3-Day Conference Access</li>
+            <li>Event Materials & Recordings</li>
+            <li>Networking Sessions</li>
+            <li>All Meals Included</li>
+            <li>VIP Dinner Access</li>
+            <li class="off">1-on-1 Speaker Sessions</li>
+          </ul>
+          <a href="#ct" class="p-btn f">Register Now</a>
+        </div>
+        <div class="pc rv">
+          <div class="p-plan">VIP Elite Pass</div>
+          <div class="p-price"><sup>$</sup>999</div>
+          <div class="p-desc">Per person / 3-Day Access</div>
+          <ul class="p-lst">
+            <li>Full 3-Day Conference Access</li>
+            <li>Event Materials & Recordings</li>
+            <li>Networking Sessions</li>
+            <li>All Meals Included</li>
+            <li>VIP Dinner Access</li>
+            <li>1-on-1 Speaker Sessions</li>
+          </ul>
+          <a href="#ct" class="p-btn o">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="ts">
+    <div class="lbl">What They Say</div>
+    <h2 class="ttl">Voices of Our Community</h2>
+    <div class="ts-grid">
+      <div class="tc rv">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-txt">Evenza delivered an extraordinary experience that exceeded every expectation. The seamless
+          execution made our annual conference truly unforgettable.</p>
+        <div class="tc-auth">
+          <div class="tc-av">ML</div>
+          <div>
+            <div class="tc-nm">Michelle Laurent</div>
+            <div class="tc-rl">COO, NexaCorp</div>
+          </div>
+        </div>
+      </div>
+      <div class="tc rv">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-txt">From planning to execution, the Evenza team was exceptional. They transformed our vision into
+          a world-class summit that stakeholders still talk about.</p>
+        <div class="tc-auth">
+          <div class="tc-av">RB</div>
+          <div>
+            <div class="tc-nm">Robert Bancroft</div>
+            <div class="tc-rl">CEO, BlueHorizon Ventures</div>
+          </div>
+        </div>
+      </div>
+      <div class="tc rv">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-txt">The creativity and professionalism Evenza brought to our product launch was outstanding. Our
+          attendees were blown away by every single detail.</p>
+        <div class="tc-auth">
+          <div class="tc-av">PW</div>
+          <div>
+            <div class="tc-nm">Priya Williams</div>
+            <div class="tc-rl">Marketing Director, TechFlow</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-outer">
+    <div class="cta-box rv">
+      <h2>Ready to Create Something <em>Extraordinary?</em></h2>
+      <p>Join thousands of professionals who trust Evenza to deliver exceptional event experiences.</p>
+      <div class="cta-btns">
+        <a href="#ct" class="btn-p">Start Planning</a>
+        <a href="#ev" class="btn-g">Explore Events</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="ct" id="ct">
+    <div class="lbl">Get in Touch</div>
+    <h2 class="ttl">Let's Plan Your Next Event</h2>
+    <div class="ct-grid">
+      <div>
+        <p style="font-size:14.5px;color:#8b80b0;line-height:1.82;margin-bottom:32px">Whether it's a corporate
+          conference, gala dinner, or a global summit — our team is ready to bring your vision to life.</p>
+        <div class="ct-info">
+          <div class="ct-it">
+            <div class="ct-ic">📍</div>
+            <div>
+              <h4>Our Location</h4>
+              <p>Level 28, Dubai World Trade Centre Tower<br />Sheikh Zayed Road, Dubai, UAE</p>
+            </div>
+          </div>
+          <div class="ct-it">
+            <div class="ct-ic">📧</div>
+            <div>
+              <h4>Email Us</h4>
+              <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                  data-cfemail="08606d646467486d7e6d667269266b6765">[email&#160;protected]</a><br /><a
+                  href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                  data-cfemail="711407141f0502311407141f0b105f121e1c">[email&#160;protected]</a></p>
+            </div>
+          </div>
+          <div class="ct-it">
+            <div class="ct-ic">📞</div>
+            <div>
+              <h4>Call Us</h4>
+              <p>+971 4 123 4567<br />Mon–Sat, 9am–6pm GST</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ct-fm">
+        <div class="ct-row">
+          <div class="ct-g"><label>First Name</label><input type="text" placeholder="John" /></div>
+          <div class="ct-g"><label>Last Name</label><input type="text" placeholder="Doe" /></div>
+        </div>
+        <div class="ct-g"><label>Email</label><input type="email" placeholder="john@company.com" /></div>
+        <div class="ct-g"><label>Event Type</label>
+          <select>
+            <option value="">Select Event Type</option>
+            <option>Conference</option>
+            <option>Corporate Workshop</option>
+            <option>Gala & Awards</option>
+            <option>Product Launch</option>
+            <option>Exhibition</option>
+          </select>
+        </div>
+        <div class="ct-g"><label>Expected Attendees</label><input type="text" placeholder="e.g. 500" /></div>
+        <div class="ct-g"><label>Message</label><textarea rows="4" placeholder="Tell us about your event..."></textarea>
+        </div>
+        <button class="btn-p" style="width:100%;padding:14px;font-size:14px;border-radius:999px"
+          onclick="sendMsg(this)">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="ft">
+      <div class="fb">
+        <a href="#" class="logo">
+          <div class="logo-box">✦</div>Evenza<span class="logo-dot">.</span>
+        </a>
+        <p>We transform your event vision into extraordinary, memorable experiences that inspire and connect people
+          worldwide.</p>
+        <div class="ft-soc">
+          <a href="#" class="fts">in</a>
+          <a href="#" class="fts">𝕏</a>
+          <a href="#" class="fts">f</a>
+          <a href="#" class="fts">▶</a>
+        </div>
+      </div>
+      <div class="fc">
+        <h4>Quick Links</h4>
+        <ul class="fl">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#ev">Events</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#sch">Schedule</a></li>
+          <li><a href="#pr">Tickets</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Services</h4>
+        <ul class="fl">
+          <li><a href="#">Event Planning</a></li>
+          <li><a href="#">Corporate Events</a></li>
+          <li><a href="#">Conferences</a></li>
+          <li><a href="#">Hybrid Events</a></li>
+          <li><a href="#">Exhibitions</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <ul class="fl">
+          <li><a href="#"><span class="__cf_email__"
+                data-cfemail="dab2bfb6b6b59abfacbfb4a0bbf4b9b5b7">[email&#160;protected]</span></a></li>
+          <li><a href="#">+971 4 123 4567</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="about.html">About Page</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2025 Evenza. All rights reserved.</span>
+      <span>Crafted with ✦ for extraordinary events</span>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="index.java"></script>
+
+</body>
+
+</html>

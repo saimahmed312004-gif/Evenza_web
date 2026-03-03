@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ – Evenza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+<link rel="stylesheet" href="faq.css">
+</head>
+
+<body>
+    <div id="spbar"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-box">✦</div>
+            Evenza<span class="logo-dot">.</span>
+        </a>
+        <ul class="nav-ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="dropdown">
+                <a href="#" class="active">Pages ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="faq.html" style="color:#a855f7">FAQ</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="index.html#pr" class="nav-btn">Join The Conference</a>
+        <button class="hmb" id="hambBtn" onclick="toggleNav()" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" onclick="closeNav()">Home</a>
+        <a href="about.html" onclick="closeNav()">About Us</a>
+        <a href="schedule.html" onclick="closeNav()">Schedule</a>
+        <a href="blog.html" onclick="closeNav()">Blog</a>
+        <div class="mob-sep"></div>
+        <a href="services.html" onclick="closeNav()">Services</a>
+        <a href="speakers.html" onclick="closeNav()">Speakers</a>
+        <a href="Gallery.html" onclick="closeNav()">Gallery</a>
+        <a href="faq.html" onclick="closeNav()">FAQ</a>
+        <a href="pricing.html" onclick="closeNav()">Pricing</a>
+        <div class="mob-sep"></div>
+        <a href="contact.html" onclick="closeNav()">Contact Us</a>
+        <div class="mob-sep"></div>
+        <a href="index.html#pr" class="mob-btn" onclick="closeNav()">Join The Conference</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="pg-hero">
+        <div class="pg-hero-bg"></div>
+        <div class="pg-hero-ov"></div>
+        <div class="pg-hero-grid"></div>
+        <div class="pg-hero-wrap">
+            <div class="breadcrumb fade-in"><a href="index.html">Home</a><span>›</span><span
+                    style="color:rgba(255,255,255,.6)">FAQ</span></div>
+            <div class="pg-lbl fade-in">Got Questions?</div>
+            <h1 class="pg-title fade-in-2">We've Got <em>Answers</em><br />For Everything</h1>
+            <p class="pg-sub fade-in-3">Everything you need to know about GIS 2025, tickets, venue, speakers, and
+                working with Evenza.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <div class="faq-wrap rv">
+        <div class="faq-layout">
+
+            <!-- Category Nav -->
+            <div class="faq-nav">
+                <div class="faq-nav-title">Categories</div>
+                <button class="faq-cat-btn on" onclick="scrollToSection('general', this)"><span
+                        class="faq-cat-ic">📋</span><span class="faq-cat-nm">General</span></button>
+                <button class="faq-cat-btn" onclick="scrollToSection('tickets', this)"><span
+                        class="faq-cat-ic">🎟️</span><span class="faq-cat-nm">Tickets</span></button>
+                <button class="faq-cat-btn" onclick="scrollToSection('venue', this)"><span
+                        class="faq-cat-ic">📍</span><span class="faq-cat-nm">Venue</span></button>
+                <button class="faq-cat-btn" onclick="scrollToSection('speakers', this)"><span
+                        class="faq-cat-ic">🎤</span><span class="faq-cat-nm">Speakers</span></button>
+                <button class="faq-cat-btn" onclick="scrollToSection('hybrid', this)"><span
+                        class="faq-cat-ic">🌐</span><span class="faq-cat-nm">Hybrid / Online</span></button>
+                <button class="faq-cat-btn" onclick="scrollToSection('services', this)"><span
+                        class="faq-cat-ic">⚙️</span><span class="faq-cat-nm">Our Services</span></button>
+            </div>
+
+            <!-- FAQ Content -->
+            <div>
+
+                <!-- General -->
+                <div class="faq-section" id="general">
+                    <div class="faq-section-title">📋 General</div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">What is the Global Innovation Summit
+                                2025?</span><span class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">The Global Innovation Summit (GIS) 2025 is Evenza's flagship annual
+                                conference — a 3-day event bringing together 2,500 global leaders, entrepreneurs,
+                                investors, and innovators in Dubai. With 48 world-class speakers, workshops, panel
+                                discussions, and networking events, GIS 2025 is the year's most anticipated gathering
+                                for the global business and technology community.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">When and where is GIS 2025 taking place?</span><span
+                                class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">GIS 2025 takes place September 28–30, 2025 at the Dubai World Trade
+                                Centre, Sheikh Zayed Road, Dubai, UAE. The venue features multiple halls, workshop
+                                rooms, and event spaces all within one complex, making it easily navigable for
+                                attendees.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">Who is this event for?</span><span
+                                class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">GIS 2025 is designed for C-suite executives, entrepreneurs, investors,
+                                tech leaders, policy makers, and professionals across industries who want to stay ahead
+                                of global trends, build high-value connections, and gain actionable insights from the
+                                world's top minds.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">How many people attended previous
+                                editions?</span><span class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">GIS 2024 hosted 2,200 in-person attendees and was live-streamed to over
+                                1.8 million viewers globally. GIS 2025 will be the largest edition yet, with capacity
+                                expanded to 2,500 in-person attendees and a global live stream available to registered
+                                virtual participants.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tickets -->
+                <div class="faq-section" id="tickets">
+                    <div class="faq-section-title">🎟️ Tickets & Registration</div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">What ticket types are available?</span><span
+                                class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">We offer three ticket tiers: <strong style="color:#e8e2f8">Standard
+                                    Pass</strong> (access to all keynotes, panels, and networking events), <strong
+                                    style="color:#e8e2f8">Premium Pass</strong> (Standard + workshops, gala dinner, and
+                                priority seating), and <strong style="color:#e8e2f8">Elite Pass</strong> (Premium + VIP
+                                dinner, 1-on-1 speaker access, and exclusive lounge). See our Pricing page for full
+                                details and current rates.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">Is there a group discount?</span><span
+                                class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">Yes — groups of 5 or more receive a 15% discount, and groups of 10 or
+                                more receive 25% off. Contact our team at hello@evenza.com with your group size and
+                                preferred ticket type and we'll arrange your booking with the discount applied.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">What is the refund policy?</span><span
+                                class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">Tickets are fully refundable up to 60 days before the event. Between
+                                30–60 days prior, a 50% refund is available. Within 30 days of the event, tickets are
+                                non-refundable but are fully transferable to another person. Simply contact us with the
+                                new attendee's details.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">Will I receive a physical ticket?</span><span
+                                class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">All tickets are digital. After registration, you'll receive a
+                                confirmation email with your QR code. Simply present this at registration on arrival and
+                                our team will check you in and provide your physical badge and event pack on the day.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue -->
+                <div class="faq-section" id="venue">
+                    <div class="faq-section-title">📍 Venue & Logistics</div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">How do I get to the Dubai World Trade
+                                Centre?</span><span class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">The Dubai World Trade Centre is located on Sheikh Zayed Road and is
+                                accessible via Dubai Metro (World Trade Centre Station on the Red Line), taxi, or car.
+                                The venue has ample parking available for attendees driving. Detailed travel
+                                instructions and a venue map will be sent in your pre-event email.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">Are hotel accommodations available
+                                nearby?</span><span class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">Yes. We have negotiated preferential rates at several nearby hotels for
+                                GIS 2025 attendees, including properties ranging from 4-star to luxury 5-star. Details
+                                and booking links will be provided in your registration confirmation email.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">Is the venue accessible for attendees with
+                                disabilities?</span><span class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">Absolutely. The Dubai World Trade Centre is fully accessible with
+                                elevators, ramps, accessible restrooms, and reserved seating areas. If you have any
+                                specific accessibility requirements, please contact us at hello@evenza.com in advance so
+                                we can ensure the best possible experience for you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speakers -->
+                <div class="faq-section" id="speakers">
+                    <div class="faq-section-title">🎤 Speakers</div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">How are speakers selected for GIS 2025?</span><span
+                                class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">Our curation team reviews hundreds of applications and nominations
+                                every year. We select speakers based on their relevance to our theme, depth of
+                                expertise, ability to deliver actionable insights, and the diversity of perspectives
+                                they bring.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">Can I apply to speak at GIS 2025?</span><span
+                                class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">Speaker applications for GIS 2025 are open until June 30, 2025. Submit
+                                your application via our Contact page with a brief bio, your proposed topic, and any
+                                previous speaking engagements. Our team will review and respond within 2 weeks.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">Will I get access to session recordings after the
+                                event?</span><span class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">Yes. All keynotes and panel sessions will be professionally recorded
+                                and made available to registered attendees within 2 weeks after the event. Premium and
+                                Elite Pass holders receive lifetime access to all recordings. Standard Pass holders
+                                receive 90-day access.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hybrid -->
+                <div class="faq-section" id="hybrid">
+                    <div class="faq-section-title">🌐 Hybrid & Online</div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">Is there a virtual attendance option?</span><span
+                                class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">Yes. GIS 2025 will be live-streamed globally via our proprietary hybrid
+                                event platform. Virtual passes are available at a reduced rate and include access to all
+                                live-streamed keynotes and panels, as well as the on-demand library post-event. Virtual
+                                attendees also have access to our digital networking lounge.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">What technology will be used for the hybrid
+                                experience?</span><span class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">We use our in-house platform combined with professional broadcast-grade
+                                production for all hybrid sessions. Virtual attendees can interact via live Q&A, polls,
+                                and our networking algorithm that matches you with other attendees based on your profile
+                                and interests.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="faq-section" id="services">
+                    <div class="faq-section-title">⚙️ Working With Evenza</div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">What types of events does Evenza manage?</span><span
+                                class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">Evenza manages everything from intimate 50-person CEO dinners to
+                                15,000-seat global summits. Our services include corporate conferences, product
+                                launches, gala dinners, hybrid events, exhibitions, award ceremonies, and government
+                                events. We've delivered 2,400+ events across 40+ countries.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">How far in advance should I contact Evenza for my
+                                event?</span><span class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">For large-scale conferences and summits, we recommend reaching out 9–12
+                                months in advance. For mid-size events (200–1,000 attendees), 4–6 months is ideal. For
+                                smaller corporate events, 6–8 weeks is typically sufficient. Contact us and we'll let
+                                you know what's achievable.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-q"><span class="faq-q-txt">Do you provide event management outside of the
+                                UAE?</span><span class="faq-ic">+</span></div>
+                        <div class="faq-a">
+                            <p class="faq-a-txt">Absolutely. We operate globally with offices in Dubai, Singapore,
+                                London, New York, and Sydney, plus local partner networks in 40+ countries. We can
+                                manage events wherever you need them, with the same level of quality and service you'd
+                                expect locally.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Strip -->
+                <div class="faq-contact rv">
+                    <div class="fc-item">
+                        <div class="fc-ic">💬</div>
+                        <div class="fc-nm">Still Have Questions?</div>
+                        <div class="fc-t">Our team responds within 24 hours</div>
+                        <a href="index.html#ct" class="fc-link">Send a Message →</a>
+                    </div>
+                    <div class="fc-item">
+                        <div class="fc-ic">📞</div>
+                        <div class="fc-nm">Call Us Directly</div>
+                        <div class="fc-t">Mon–Fri, 9AM–6PM GST</div>
+                        <a href="tel:+97141234567" class="fc-link">+971 4 123 4567 →</a>
+                    </div>
+                    <div class="fc-item">
+                        <div class="fc-ic">📧</div>
+                        <div class="fc-nm">Email Support</div>
+                        <div class="fc-t">For detailed enquiries</div>
+                        <a href="mailto:hello@evenza.com" class="fc-link">hello@evenza.com →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-outer">
+        <div class="cta-box rv">
+            <h2>Didn't Find Your <em>Answer?</em></h2>
+            <p>Our team is always happy to help. Reach out and we'll get back to you within 24 hours.</p>
+            <div class="cta-btns">
+                <a href="index.html#ct" class="btn-p">Contact Us</a>
+                <a href="pricing.html" class="btn-g">View Pricing</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="ft">
+            <div class="fb">
+                <a href="index.html" class="logo">
+                    <div class="logo-box">✦</div>Evenza<span class="logo-dot">.</span>
+                </a>
+                <p>We transform your event vision into extraordinary, memorable experiences worldwide.</p>
+                <div class="ft-soc"><a href="#" class="fts">in</a><a href="#" class="fts">𝕏</a><a href="#"
+                        class="fts">f</a><a href="#" class="fts">▶</a></div>
+            </div>
+            <div class="fc2">
+                <h4>Quick Links</h4>
+                <ul class="fl">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="index.html#pr">Tickets</a></li>
+                </ul>
+            </div>
+            <div class="fc2">
+                <h4>Pages</h4>
+                <ul class="fl">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="fc2">
+                <h4>Contact</h4>
+                <ul class="fl">
+                    <li><a href="#">hello@evenza.com</a></li>
+                    <li><a href="#">+971 4 123 4567</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ft-bot">
+            <span>© 2025 Evenza. All rights reserved.</span>
+            <span>Crafted with ✦ for extraordinary events</span>
+        </div>
+    </footer>
+<script src="faq.java"></script>
+</body>
+
+</html>

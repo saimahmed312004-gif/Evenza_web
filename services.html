@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services – Evenza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="services.css">
+  
+</head>
+
+<body>
+    <div id="spbar"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-box">✦</div>
+            Evenza<span class="logo-dot">.</span>
+        </a>
+        <ul class="nav-ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="dropdown">
+                <a href="#" class="active">Pages ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="services.html" style="color:#a855f7">Services</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="index.html#pr" class="nav-btn">Join The Conference</a>
+        <button class="hmb" id="hambBtn" onclick="toggleNav()" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" onclick="closeNav()">Home</a>
+        <a href="about.html" onclick="closeNav()">About Us</a>
+        <a href="schedule.html" onclick="closeNav()">Schedule</a>
+        <a href="blog.html" onclick="closeNav()">Blog</a>
+        <div class="mob-sep"></div>
+        <a href="services.html" onclick="closeNav()">Services</a>
+        <a href="speakers.html" onclick="closeNav()">Speakers</a>
+        <a href="Gallery.html" onclick="closeNav()">Gallery</a>
+        <a href="faq.html" onclick="closeNav()">FAQ</a>
+        <a href="pricing.html" onclick="closeNav()">Pricing</a>
+        <div class="mob-sep"></div>
+        <a href="contact.html" onclick="closeNav()">Contact Us</a>
+        <div class="mob-sep"></div>
+        <a href="index.html#pr" class="mob-btn" onclick="closeNav()">Join The Conference</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="pg-hero">
+        <div class="pg-hero-bg"></div>
+        <div class="pg-hero-ov"></div>
+        <div class="pg-hero-grid"></div>
+        <div class="pg-hero-wrap">
+            <div class="breadcrumb fade-in"><a href="index.html">Home</a><span>›</span><span
+                    style="color:rgba(255,255,255,.6)">Services</span></div>
+            <div class="pg-lbl fade-in">What We Do</div>
+            <h1 class="pg-title fade-in-2">World-Class Services<br />Built for <em>Every Event</em></h1>
+            <p class="pg-sub fade-in-3">From intimate boardroom dinners to 15,000-seat global summits — we bring the
+                same precision and passion to every project.</p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="sv">
+        <div class="lbl rv">Our Services</div>
+        <h2 class="ttl rv">Everything You Need,<br /><span>All Under One Roof</span></h2>
+        <div class="sv-grid">
+            <div class="sv-c rv">
+                <div class="sv-num">01</div>
+                <div class="sv-ic">🎯</div>
+                <div class="sv-n">Strategic Event Planning</div>
+                <div class="sv-t">End-to-end planning from concept to execution, driven by data and decades of
+                    experience.</div>
+                <ul class="sv-list">
+                    <li>Concept development & brief analysis</li>
+                    <li>Budget planning & vendor management</li>
+                    <li>Timeline & project management</li>
+                    <li>Risk assessment & contingency planning</li>
+                </ul>
+            </div>
+            <div class="sv-c rv">
+                <div class="sv-num">02</div>
+                <div class="sv-ic">🎤</div>
+                <div class="sv-n">Conference & Summit Production</div>
+                <div class="sv-t">We produce world-class conferences and summits that position your brand as a global
+                    thought leader.</div>
+                <ul class="sv-list">
+                    <li>Speaker sourcing & management</li>
+                    <li>Stage & set design</li>
+                    <li>Agenda curation & programming</li>
+                    <li>Attendee experience design</li>
+                </ul>
+            </div>
+            <div class="sv-c rv">
+                <div class="sv-num">03</div>
+                <div class="sv-ic">✨</div>
+                <div class="sv-n">Premium Stage & AV Production</div>
+                <div class="sv-t">Jaw-dropping stage design, world-class lighting, and crystal-clear audio that leaves
+                    audiences speechless.</div>
+                <ul class="sv-list">
+                    <li>Custom stage & set fabrication</li>
+                    <li>Professional lighting design</li>
+                    <li>High-fidelity audio systems</li>
+                    <li>LED walls & projection mapping</li>
+                </ul>
+            </div>
+            <div class="sv-c rv">
+                <div class="sv-num">04</div>
+                <div class="sv-ic">🌐</div>
+                <div class="sv-n">Hybrid & Virtual Events</div>
+                <div class="sv-t">Seamlessly connect in-person and online audiences with our cutting-edge hybrid event
+                    platform.</div>
+                <ul class="sv-list">
+                    <li>Live streaming & broadcast</li>
+                    <li>Virtual attendee engagement tools</li>
+                    <li>On-demand content management</li>
+                    <li>Global reach, local feel</li>
+                </ul>
+            </div>
+            <div class="sv-c rv">
+                <div class="sv-num">05</div>
+                <div class="sv-ic">🍽️</div>
+                <div class="sv-n">Gala Dinners & Corporate Events</div>
+                <div class="sv-t">Unforgettable gala experiences — from intimate CEO dinners to spectacular 5,000-person
+                    award ceremonies.</div>
+                <ul class="sv-list">
+                    <li>Venue sourcing & management</li>
+                    <li>Luxury catering coordination</li>
+                    <li>Entertainment & performance booking</li>
+                    <li>Decor & floral design</li>
+                </ul>
+            </div>
+            <div class="sv-c rv">
+                <div class="sv-num">06</div>
+                <div class="sv-ic">🚀</div>
+                <div class="sv-n">Product Launches & Exhibitions</div>
+                <div class="sv-t">Make your product's debut unforgettable. We create launch experiences that generate
+                    global buzz.</div>
+                <ul class="sv-list">
+                    <li>Experiential booth design</li>
+                    <li>Media & press coordination</li>
+                    <li>Interactive brand activations</li>
+                    <li>Post-event content production</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process">
+        <div class="process-in">
+            <div class="lbl rv">How We Work</div>
+            <h2 class="ttl rv">Our 4-Step <span>Process</span></h2>
+            <div class="process-steps">
+                <div class="ps-c rv">
+                    <div class="ps-num">1</div>
+                    <div class="ps-n">Discovery</div>
+                    <div class="ps-t">We deep-dive into your goals, audience, brand, and vision to build the strategic
+                        foundation.</div>
+                </div>
+                <div class="ps-c rv">
+                    <div class="ps-num">2</div>
+                    <div class="ps-n">Design</div>
+                    <div class="ps-t">Our creative team crafts a complete event concept — from visual identity to
+                        detailed run-of-show.</div>
+                </div>
+                <div class="ps-c rv">
+                    <div class="ps-num">3</div>
+                    <div class="ps-n">Deliver</div>
+                    <div class="ps-t">We execute flawlessly, managing every supplier, timeline, and on-site detail with
+                        precision.</div>
+                </div>
+                <div class="ps-c rv">
+                    <div class="ps-num">4</div>
+                    <div class="ps-n">Debrief</div>
+                    <div class="ps-t">Post-event analytics, attendee feedback, and a full impact report to measure your
+                        ROI.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="ind">
+        <div class="lbl rv">Industries</div>
+        <h2 class="ttl rv">We Serve Every <span>Industry</span></h2>
+        <div class="ind-grid">
+            <div class="ind-c rv">
+                <div class="ind-ic">💼</div>
+                <div class="ind-n">Corporate & Finance</div>
+                <div class="ind-t">Board meetings to global investor summits</div>
+            </div>
+            <div class="ind-c rv">
+                <div class="ind-ic">💻</div>
+                <div class="ind-n">Technology</div>
+                <div class="ind-t">Product launches, hackathons & tech summits</div>
+            </div>
+            <div class="ind-c rv">
+                <div class="ind-ic">🏥</div>
+                <div class="ind-n">Healthcare & Pharma</div>
+                <div class="ind-t">Medical congresses & research symposiums</div>
+            </div>
+            <div class="ind-c rv">
+                <div class="ind-ic">🎓</div>
+                <div class="ind-n">Education</div>
+                <div class="ind-t">Graduation ceremonies & academic conferences</div>
+            </div>
+            <div class="ind-c rv">
+                <div class="ind-ic">🏛️</div>
+                <div class="ind-n">Government & NGO</div>
+                <div class="ind-t">State events, summits & public forums</div>
+            </div>
+            <div class="ind-c rv">
+                <div class="ind-ic">🛍️</div>
+                <div class="ind-n">Retail & Fashion</div>
+                <div class="ind-t">Brand activations & fashion shows</div>
+            </div>
+            <div class="ind-c rv">
+                <div class="ind-ic">⚽</div>
+                <div class="ind-n">Sports</div>
+                <div class="ind-t">Award nights & sports hospitality events</div>
+            </div>
+            <div class="ind-c rv">
+                <div class="ind-ic">🎨</div>
+                <div class="ind-n">Arts & Culture</div>
+                <div class="ind-t">Exhibitions, galas & cultural festivals</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-outer">
+        <div class="cta-box rv">
+            <h2>Let's Build Something <em>Remarkable</em></h2>
+            <p>Tell us about your event and we'll create a custom proposal within 48 hours.</p>
+            <div class="cta-btns">
+                <a href="index.html#ct" class="btn-p">Get a Free Proposal</a>
+                <a href="about.html" class="btn-g">Learn About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="ft">
+            <div class="fb">
+                <a href="index.html" class="logo">
+                    <div class="logo-box">✦</div>Evenza<span class="logo-dot">.</span>
+                </a>
+                <p>We transform your event vision into extraordinary, memorable experiences that inspire and connect
+                    people worldwide.</p>
+                <div class="ft-soc"><a href="#" class="fts">in</a><a href="#" class="fts">𝕏</a><a href="#"
+                        class="fts">f</a><a href="#" class="fts">▶</a></div>
+            </div>
+            <div class="fc">
+                <h4>Quick Links</h4>
+                <ul class="fl">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#ev">Events</a></li>
+                    <li><a href="index.html#speakers">Speakers</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="index.html#pr">Tickets</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Services</h4>
+                <ul class="fl">
+                    <li><a href="services.html">Event Planning</a></li>
+                    <li><a href="services.html">Corporate Events</a></li>
+                    <li><a href="services.html">Conferences</a></li>
+                    <li><a href="services.html">Hybrid Events</a></li>
+                    <li><a href="services.html">Exhibitions</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Contact</h4>
+                <ul class="fl">
+                    <li><a href="#">hello@evenza.com</a></li>
+                    <li><a href="#">+971 4 123 4567</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ft-bot">
+            <span>© 2025 Evenza. All rights reserved.</span>
+            <span>Crafted with ✦ for extraordinary events</span>
+        </div>
+    </footer>
+<script src="services.java"></script>
+</body>
+
+</html>

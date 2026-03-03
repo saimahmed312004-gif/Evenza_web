@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing – Evenza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="pricing.css">
+  
+</head>
+
+<body>
+    <div id="spbar"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-box">✦</div>
+            Evenza<span class="logo-dot">.</span>
+        </a>
+        <ul class="nav-ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="dropdown">
+                <a href="#" class="active">Pages ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="pricing.html" style="color:#a855f7">Pricing</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="#pr-grid" class="nav-btn">Join The Conference</a>
+        <button class="hmb" id="hambBtn" onclick="toggleNav()" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" onclick="closeNav()">Home</a>
+        <a href="about.html" onclick="closeNav()">About Us</a>
+        <a href="schedule.html" onclick="closeNav()">Schedule</a>
+        <a href="blog.html" onclick="closeNav()">Blog</a>
+        <div class="mob-sep"></div>
+        <a href="services.html" onclick="closeNav()">Services</a>
+        <a href="speakers.html" onclick="closeNav()">Speakers</a>
+        <a href="Gallery.html" onclick="closeNav()">Gallery</a>
+        <a href="faq.html" onclick="closeNav()">FAQ</a>
+        <a href="pricing.html" onclick="closeNav()">Pricing</a>
+        <div class="mob-sep"></div>
+        <a href="contact.html" onclick="closeNav()">Contact Us</a>
+        <div class="mob-sep"></div>
+        <a href="#pr-grid" class="mob-btn" onclick="closeNav()">Join The Conference</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="pg-hero">
+        <div class="pg-hero-bg"></div>
+        <div class="pg-hero-ov"></div>
+        <div class="pg-hero-grid"></div>
+        <div class="pg-hero-wrap">
+            <div class="breadcrumb fade-in"><a href="index.html">Home</a><span>›</span><span
+                    style="color:rgba(255,255,255,.6)">Pricing</span></div>
+            <div class="pg-lbl fade-in">GIS 2025 Tickets</div>
+            <h1 class="pg-title fade-in-2">Choose Your <em>Experience</em><br />at GIS 2025</h1>
+            <p class="pg-sub fade-in-3">Three passes. One extraordinary summit. Find the right access level for your
+                goals — early bird rates now live.</p>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <div class="pr-wrap" id="pr-grid">
+
+        <!-- Toggle -->
+        <div class="pr-toggle rv">
+            <span class="pr-toggle-label on" id="lbl-m">Monthly</span>
+            <div class="toggle-sw" id="toggle-sw" onclick="toggleBilling()">
+                <div class="toggle-knob"></div>
+            </div>
+            <span class="pr-toggle-label" id="lbl-a">Annual <span class="pr-save">SAVE 20%</span></span>
+        </div>
+
+        <!-- Cards -->
+        <div class="pr-grid rv">
+            <div class="pr-c">
+                <div class="pr-label">Standard</div>
+                <div class="pr-name">Standard Pass</div>
+                <div class="pr-price"><span class="pr-curr">$</span><span class="pr-amt" id="p1">799</span></div>
+                <div class="pr-per">per person · all 3 days</div>
+                <div class="pr-orig" id="p1-orig"></div>
+                <div class="pr-divider"></div>
+                <div class="pr-features">
+                    <div class="pf yes"><span class="pf-ic">✓</span>All keynote sessions</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>All panel discussions</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Networking breaks & lunches</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Event app access</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>90-day session recordings</div>
+                    <div class="pf no"><span class="pf-ic">—</span>Workshops & masterclasses</div>
+                    <div class="pf no"><span class="pf-ic">—</span>Gala dinner access</div>
+                    <div class="pf no"><span class="pf-ic">—</span>1-on-1 speaker access</div>
+                    <div class="pf no"><span class="pf-ic">—</span>VIP lounge</div>
+                </div>
+                <a href="#" class="btn-outline">Get Standard Pass</a>
+            </div>
+            <div class="pr-c pop">
+                <div class="pr-badge">⭐ Most Popular</div>
+                <div class="pr-label" style="margin-top:14px">Premium</div>
+                <div class="pr-name">Premium Pass</div>
+                <div class="pr-price"><span class="pr-curr">$</span><span class="pr-amt" id="p2">1,499</span></div>
+                <div class="pr-per">per person · all 3 days</div>
+                <div class="pr-orig" id="p2-orig"></div>
+                <div class="pr-divider"></div>
+                <div class="pr-features">
+                    <div class="pf yes"><span class="pf-ic">✓</span>All keynote sessions</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>All panel discussions</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Networking breaks & lunches</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Event app access</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Lifetime session recordings</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>All workshops & masterclasses</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Gala welcome dinner</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Priority front seating</div>
+                    <div class="pf no"><span class="pf-ic">—</span>1-on-1 speaker access</div>
+                </div>
+                <a href="#" class="btn-p">Get Premium Pass</a>
+            </div>
+            <div class="pr-c">
+                <div class="pr-label">Elite</div>
+                <div class="pr-name">Elite Pass</div>
+                <div class="pr-price"><span class="pr-curr">$</span><span class="pr-amt" id="p3">3,299</span></div>
+                <div class="pr-per">per person · all 3 days</div>
+                <div class="pr-orig" id="p3-orig"></div>
+                <div class="pr-divider"></div>
+                <div class="pr-features">
+                    <div class="pf yes"><span class="pf-ic">✓</span>All keynote sessions</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>All panel discussions</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Networking breaks & lunches</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Event app access</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Lifetime session recordings</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>All workshops & masterclasses</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>Gala dinner — all 3 nights</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>VIP exclusive lounge</div>
+                    <div class="pf yes"><span class="pf-ic">✓</span>1-on-1 speed networking with speakers</div>
+                </div>
+                <a href="#" class="btn-outline">Get Elite Pass</a>
+            </div>
+        </div>
+
+        <!-- Virtual -->
+        <div class="pr-virtual rv">
+            <div class="prv-left">
+                <div class="prv-ic">🌐</div>
+                <div>
+                    <div class="prv-nm">Virtual Pass</div>
+                    <div class="prv-t">Watch live from anywhere in the world — full keynotes, panels & on-demand library
+                        for 90 days</div>
+                </div>
+            </div>
+            <div style="text-align:center">
+                <div class="prv-price" id="pv">$199</div>
+                <div class="prv-per">per person</div>
+            </div>
+            <a href="#" class="btn-teal">Get Virtual Pass</a>
+        </div>
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <section class="compare">
+        <div class="compare-in rv">
+            <div class="lbl">Full Comparison</div>
+            <div class="ttl">What's Included in <span>Each Pass</span></div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Standard</th>
+                            <th class="pop-col">Premium ⭐</th>
+                            <th>Elite</th>
+                            <th>Virtual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>All Keynote Sessions</td>
+                            <td><span class="check">✓</span></td>
+                            <td class="pop-col"><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span> (live)</td>
+                        </tr>
+                        <tr>
+                            <td>All Panel Discussions</td>
+                            <td><span class="check">✓</span></td>
+                            <td class="pop-col"><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span> (live)</td>
+                        </tr>
+                        <tr>
+                            <td>Networking Lunches</td>
+                            <td><span class="check">✓</span></td>
+                            <td class="pop-col"><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="cross">—</span></td>
+                        </tr>
+                        <tr>
+                            <td>Session Recordings</td>
+                            <td>90 days</td>
+                            <td class="pop-col">Lifetime</td>
+                            <td>Lifetime</td>
+                            <td>90 days</td>
+                        </tr>
+                        <tr>
+                            <td>Workshops & Masterclasses</td>
+                            <td><span class="cross">—</span></td>
+                            <td class="pop-col"><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="cross">—</span></td>
+                        </tr>
+                        <tr>
+                            <td>Gala Dinner Access</td>
+                            <td><span class="cross">—</span></td>
+                            <td class="pop-col">Night 1</td>
+                            <td>All 3 nights</td>
+                            <td><span class="cross">—</span></td>
+                        </tr>
+                        <tr>
+                            <td>Priority / Front Seating</td>
+                            <td><span class="cross">—</span></td>
+                            <td class="pop-col"><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="cross">—</span></td>
+                        </tr>
+                        <tr>
+                            <td>VIP Exclusive Lounge</td>
+                            <td><span class="cross">—</span></td>
+                            <td class="pop-col"><span class="cross">—</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="cross">—</span></td>
+                        </tr>
+                        <tr>
+                            <td>1-on-1 Speaker Access</td>
+                            <td><span class="cross">—</span></td>
+                            <td class="pop-col"><span class="cross">—</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="cross">—</span></td>
+                        </tr>
+                        <tr>
+                            <td>Digital Networking Lounge</td>
+                            <td><span class="cross">—</span></td>
+                            <td class="pop-col"><span class="cross">—</span></td>
+                            <td><span class="cross">—</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Certificate of Attendance</td>
+                            <td><span class="check">✓</span></td>
+                            <td class="pop-col"><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:700;color:#fff">Price</td>
+                            <td style="color:#fff;font-weight:700">$799</td>
+                            <td class="pop-col" style="color:#a855f7;font-weight:800">$1,499</td>
+                            <td style="color:#fff;font-weight:700">$3,299</td>
+                            <td style="color:#00f5d4;font-weight:700">$199</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEES -->
+    <section class="guarantees">
+        <div class="lbl rv">Our Promise</div>
+        <div class="ttl rv">Book With <span>Confidence</span></div>
+        <div class="gg-grid">
+            <div class="gg rv">
+                <div class="gg-ic">💳</div>
+                <div class="gg-n">Secure Payment</div>
+                <div class="gg-t">All transactions are SSL encrypted and processed through secure payment gateways.
+                </div>
+            </div>
+            <div class="gg rv">
+                <div class="gg-ic">↩️</div>
+                <div class="gg-n">Easy Transfers</div>
+                <div class="gg-t">Can't make it? Transfer your ticket to anyone, anytime before the event.</div>
+            </div>
+            <div class="gg rv">
+                <div class="gg-ic">🛡️</div>
+                <div class="gg-n">Full Refund (60 days)</div>
+                <div class="gg-t">Cancel up to 60 days before GIS 2025 for a full, no-questions-asked refund.</div>
+            </div>
+            <div class="gg rv">
+                <div class="gg-ic">🤝</div>
+                <div class="gg-n">Group Discounts</div>
+                <div class="gg-t">Groups of 5+ get 15% off. Groups of 10+ get 25% off. Contact us for details.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-outer">
+        <div class="cta-box rv">
+            <h2>Not Sure Which Pass Is <em>Right for You?</em></h2>
+            <p>Our team can help you find the perfect option for your goals and budget.</p>
+            <div class="cta-btns">
+                <a href="index.html#ct" class="btn-p">Talk to Our Team</a>
+                <a href="faq.html" class="btn-g">Read the FAQ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="ft">
+            <div class="fb">
+                <a href="index.html" class="logo">
+                    <div class="logo-box">✦</div>Evenza<span class="logo-dot">.</span>
+                </a>
+                <p>We transform your event vision into extraordinary, memorable experiences worldwide.</p>
+                <div class="ft-soc"><a href="#" class="fts">in</a><a href="#" class="fts">𝕏</a><a href="#"
+                        class="fts">f</a><a href="#" class="fts">▶</a></div>
+            </div>
+            <div class="fc">
+                <h4>Quick Links</h4>
+                <ul class="fl">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Pages</h4>
+                <ul class="fl">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Contact</h4>
+                <ul class="fl">
+                    <li><a href="#">hello@evenza.com</a></li>
+                    <li><a href="#">+971 4 123 4567</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ft-bot">
+            <span>© 2025 Evenza. All rights reserved.</span>
+            <span>Crafted with ✦ for extraordinary events</span>
+        </div>
+    </footer>
+<script src="pricing.java"></script>
+</body>
+
+</html>

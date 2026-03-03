@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speakers – Evenza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="speakers.css">
+   
+</head>
+
+<body>
+    <div id="spbar"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-box">✦</div>
+            Evenza<span class="logo-dot">.</span>
+        </a>
+        <ul class="nav-ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="dropdown">
+                <a href="#" class="active">Pages ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="speakers.html" style="color:#a855f7">Speakers</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="index.html#pr" class="nav-btn">Join The Conference</a>
+        <button class="hmb" id="hambBtn" onclick="toggleNav()" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" onclick="closeNav()">Home</a>
+        <a href="about.html" onclick="closeNav()">About Us</a>
+        <a href="schedule.html" onclick="closeNav()">Schedule</a>
+        <a href="blog.html" onclick="closeNav()">Blog</a>
+        <div class="mob-sep"></div>
+        <a href="services.html" onclick="closeNav()">Services</a>
+        <a href="speakers.html" onclick="closeNav()">Speakers</a>
+        <a href="Gallery.html" onclick="closeNav()">Gallery</a>
+        <a href="faq.html" onclick="closeNav()">FAQ</a>
+        <a href="pricing.html" onclick="closeNav()">Pricing</a>
+        <div class="mob-sep"></div>
+        <a href="contact.html" onclick="closeNav()">Contact Us</a>
+        <div class="mob-sep"></div>
+        <a href="index.html#pr" class="mob-btn" onclick="closeNav()">Join The Conference</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="pg-hero">
+        <div class="pg-hero-bg"></div>
+        <div class="pg-hero-ov"></div>
+        <div class="pg-hero-grid"></div>
+        <div class="pg-hero-wrap">
+            <div class="breadcrumb fade-in"><a href="index.html">Home</a><span>›</span><span
+                    style="color:rgba(255,255,255,.6)">Speakers</span></div>
+            <div class="pg-lbl fade-in">GIS 2025 Lineup</div>
+            <h1 class="pg-title fade-in-2">Meet the <em>Visionaries</em><br />Shaping Tomorrow</h1>
+            <p class="pg-sub fade-in-3">48 world-class speakers. 3 days. Infinite inspiration. Get ready to be
+                challenged, inspired, and transformed.</p>
+        </div>
+    </section>
+
+    <!-- SPEAKERS WRAP -->
+    <div class="spk-wrap">
+        <div class="lbl rv">Keynote Speaker</div>
+        <h2 class="ttl rv" style="margin-bottom:36px">Opening <span>Keynote</span></h2>
+
+        <!-- Featured -->
+        <div class="spk-featured rv">
+            <div class="sf-left">
+                <div class="sf-badge">⭐ Opening Keynote · Sep 28, 09:00</div>
+                <div class="sf-av">AR</div>
+                <div class="sf-nm">Alexandra Reed</div>
+                <div class="sf-rl">CEO & Founder</div>
+                <div class="sf-og">FutureTech Ventures</div>
+                <div class="sf-bio">Visionary tech entrepreneur with 20+ years building companies at the frontier of
+                    artificial intelligence, deep tech, and global innovation. Named by Forbes as one of the 50 Most
+                    Powerful Women in Technology three years running.</div>
+                <div class="sf-topic">
+                    <div class="sf-topic-l">Keynote Topic</div>
+                    <div class="sf-topic-t">The Next Decade of AI: What Every Leader Must Know to Stay Ahead</div>
+                </div>
+                <div class="sf-soc"><a href="#" class="ssb">in</a><a href="#" class="ssb">𝕏</a><a href="#"
+                        class="ssb">🌐</a></div>
+            </div>
+            <div class="sf-right">
+                <div class="sf-right-bg"></div>
+                <div class="sf-right-av">AR</div>
+            </div>
+        </div>
+
+        <!-- All Speakers -->
+        <div class="lbl rv" style="margin-top:56px">All Speakers</div>
+        <h2 class="ttl rv" style="margin-bottom:28px">The Full <span>Lineup</span></h2>
+        <div class="spk-filter rv">
+            <button class="f-btn on">All (48)</button>
+            <button class="f-btn">Keynote</button>
+            <button class="f-btn">Workshop</button>
+            <button class="f-btn">Panel</button>
+            <button class="f-btn">Tech & AI</button>
+            <button class="f-btn">Finance</button>
+            <button class="f-btn">Leadership</button>
+        </div>
+
+        <div class="spk-grid">
+            <div class="spk-c rv">
+                <div class="spk-ph">
+                    <div class="spk-bg"></div>
+                    <div class="spk-av">AR</div>
+                    <div class="spk-ov">
+                        <p class="spk-bio">Visionary tech entrepreneur, 20+ years building global AI companies.</p>
+                        <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+                    </div>
+                </div>
+                <div class="spk-inf">
+                    <div class="spk-nm">Alexandra Reed</div>
+                    <div class="spk-rl">CEO & Founder</div>
+                    <div class="spk-og">FutureTech Ventures</div>
+                    <div class="spk-tp">The Next Decade of AI</div>
+                </div>
+            </div>
+            <div class="spk-c rv">
+                <div class="spk-ph">
+                    <div class="spk-bg"></div>
+                    <div class="spk-av">JM</div>
+                    <div class="spk-ov">
+                        <p class="spk-bio">Chief Innovation Officer scaling global enterprises across continents.</p>
+                        <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+                    </div>
+                </div>
+                <div class="spk-inf">
+                    <div class="spk-nm">James Morales</div>
+                    <div class="spk-rl">Chief Innovation Officer</div>
+                    <div class="spk-og">GlobalSystems Inc.</div>
+                    <div class="spk-tp">Disruption as Strategy</div>
+                </div>
+            </div>
+            <div class="spk-c rv">
+                <div class="spk-ph">
+                    <div class="spk-bg"></div>
+                    <div class="spk-av">SN</div>
+                    <div class="spk-ov">
+                        <p class="spk-bio">Managing Director leading sustainable investment across 3 continents.</p>
+                        <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+                    </div>
+                </div>
+                <div class="spk-inf">
+                    <div class="spk-nm">Sophia Nguyen</div>
+                    <div class="spk-rl">Managing Director</div>
+                    <div class="spk-og">Apex Capital</div>
+                    <div class="spk-tp">ESG in the Modern Portfolio</div>
+                </div>
+            </div>
+            <div class="spk-c rv">
+                <div class="spk-ph">
+                    <div class="spk-bg"></div>
+                    <div class="spk-av">DK</div>
+                    <div class="spk-ov">
+                        <p class="spk-bio">Harvard Economics Professor and former World Bank senior advisor.</p>
+                        <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+                    </div>
+                </div>
+                <div class="spk-inf">
+                    <div class="spk-nm">David Khan</div>
+                    <div class="spk-rl">Professor of Economics</div>
+                    <div class="spk-og">Harvard Business School</div>
+                    <div class="spk-tp">Global Macro Trends</div>
+                </div>
+            </div>
+            <div class="spk-c rv">
+                <div class="spk-ph">
+                    <div class="spk-bg"></div>
+                    <div class="spk-av">MC</div>
+                    <div class="spk-ov">
+                        <p class="spk-bio">Former WPP Creative Director, now leading brand experience strategy globally.
+                        </p>
+                        <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+                    </div>
+                </div>
+                <div class="spk-inf">
+                    <div class="spk-nm">Marcus Chen</div>
+                    <div class="spk-rl">Chief Creative Officer</div>
+                    <div class="spk-og">Evenza</div>
+                    <div class="spk-tp">Brand Experience Design</div>
+                </div>
+            </div>
+            <div class="spk-c rv">
+                <div class="spk-ph">
+                    <div class="spk-bg"></div>
+                    <div class="spk-av">LA</div>
+                    <div class="spk-ov">
+                        <p class="spk-bio">Global operations leader managing 40+ country partnerships and logistics.</p>
+                        <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+                    </div>
+                </div>
+                <div class="spk-inf">
+                    <div class="spk-nm">Layla Al-Amin</div>
+                    <div class="spk-rl">COO</div>
+                    <div class="spk-og">Evenza</div>
+                    <div class="spk-tp">Scaling Operations Globally</div>
+                </div>
+            </div>
+            <div class="spk-c rv">
+                <div class="spk-ph">
+                    <div class="spk-bg"></div>
+                    <div class="spk-av">RP</div>
+                    <div class="spk-ov">
+                        <p class="spk-bio">Serial entrepreneur, 4 successful exits, angel investor in 30+ startups.</p>
+                        <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+                    </div>
+                </div>
+                <div class="spk-inf">
+                    <div class="spk-nm">Rania Patel</div>
+                    <div class="spk-rl">Serial Entrepreneur</div>
+                    <div class="spk-og">Patel Ventures</div>
+                    <div class="spk-tp">Building for Exit from Day One</div>
+                </div>
+            </div>
+            <div class="spk-c rv">
+                <div class="spk-ph">
+                    <div class="spk-bg"></div>
+                    <div class="spk-av">TW</div>
+                    <div class="spk-ov">
+                        <p class="spk-bio">Former CTO of a Fortune 50 company, now leading the AI ethics conversation.
+                        </p>
+                        <div class="spk-soc"><a href="#" class="sb">in</a><a href="#" class="sb">𝕏</a></div>
+                    </div>
+                </div>
+                <div class="spk-inf">
+                    <div class="spk-nm">Thomas Wright</div>
+                    <div class="spk-rl">AI Ethics Researcher</div>
+                    <div class="spk-og">MIT Media Lab</div>
+                    <div class="spk-tp">Responsible AI in Business</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-outer">
+        <div class="cta-box rv">
+            <h2>Want to Speak at <em>GIS 2025?</em></h2>
+            <p>We're always looking for exceptional voices. Submit your speaker application today.</p>
+            <div class="cta-btns">
+                <a href="index.html#ct" class="btn-p">Apply to Speak</a>
+                <a href="index.html#pr" class="btn-g">Get Your Ticket</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="ft">
+            <div class="fb">
+                <a href="index.html" class="logo">
+                    <div class="logo-box">✦</div>Evenza<span class="logo-dot">.</span>
+                </a>
+                <p>We transform your event vision into extraordinary, memorable experiences that inspire and connect
+                    people worldwide.</p>
+                <div class="ft-soc"><a href="#" class="fts">in</a><a href="#" class="fts">𝕏</a><a href="#"
+                        class="fts">f</a><a href="#" class="fts">▶</a></div>
+            </div>
+            <div class="fc">
+                <h4>Quick Links</h4>
+                <ul class="fl">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#ev">Events</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="index.html#pr">Tickets</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Services</h4>
+                <ul class="fl">
+                    <li><a href="services.html">Event Planning</a></li>
+                    <li><a href="services.html">Corporate Events</a></li>
+                    <li><a href="services.html">Conferences</a></li>
+                    <li><a href="services.html">Hybrid Events</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Contact</h4>
+                <ul class="fl">
+                    <li><a href="#">hello@evenza.com</a></li>
+                    <li><a href="#">+971 4 123 4567</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ft-bot">
+            <span>© 2025 Evenza. All rights reserved.</span>
+            <span>Crafted with ✦ for extraordinary events</span>
+        </div>
+    </footer>
+
+  <script src="speakers.java"></script>
+</body>
+
+</html>
